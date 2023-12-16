@@ -217,3 +217,30 @@
 			});
 
 })(jQuery);
+
+// (function($) {
+// 	$(document).ready(function() {
+// 	   var video = document.getElementById('fullscreen-video');
+// 	   var videoContainer = document.querySelector('.video-container');
+// 	   var fullscreenButton = document.getElementById('demo-reel-button');
+ 
+// 	   fullscreenButton.addEventListener('click', function() {
+// 		  if (video.requestFullscreen) {
+// 			 videoContainer.requestFullscreen();
+// 		  } else if (video.mozRequestFullScreen) {
+// 			 videoContainer.mozRequestFullScreen();
+// 		  } else if (video.webkitRequestFullscreen) {
+// 			 videoContainer.webkitRequestFullscreen();
+// 		  } else if (video.msRequestFullscreen) {
+// 			 videoContainer.msRequestFullscreen();
+// 		  }
+// 	   });
+ 
+// 	   // Agrega un manejador de eventos para salir de la pantalla completa
+// 	   $(document).on('fullscreenchange', function() {
+// 		  if (!document.fullscreenElement && !document.webkitIsFullScreen && !document.mozFullScreen && !document.msFullscreenElement) {
+// 			 // Salir de la pantalla completa, puedes realizar acciones adicionales aquí si es necesario.
+// 		  }
+// 	   });
+// 	});
+//  })(jQuery);
