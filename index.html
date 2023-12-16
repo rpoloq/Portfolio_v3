@@ -33,9 +33,9 @@
 				<div class="content">
 					<header>
 						<h2>Hey there!</h2>
-						
 					</header>
-					<p>Welcome to <strong>my personal Portfolio.</strong> See my work and projects I've been working on<br />
+					<p>Welcome to <strong>my personal Portfolio.</strong><br />
+					See the projects I've been working on<br />
 					<span>Computer Graphics</span></p>
 					<footer>
 						
@@ -47,45 +47,34 @@
 
 		<!-- One -->
 			<section id="one" class="main style2 right dark fullscreen">
+				<div class="video">
+					<video controls width="90%">
+						<source src="assets/videos/DEMO-REEL INTRO.mp4" type="video/mp4">
+						Tu navegador no admite la reproducción de videos.
+					</video>
+				</div>
 				<div class="content box style2">
 					<header>
 						<h2>What I Do</h2>
 					</header>
-					<p>Lorem ipsum dolor sit amet et sapien sed elementum egestas dolore condimentum. Fusce blandit ultrices sapien, in accumsan orci rhoncus eu. Sed sodales venenatis arcu, id varius justo euismod in. Curabitur egestas consectetur magna.</p>
-					
-					<div class="video-container">
-						<video id="fullscreen-video" style="display: none;" controls width="100%">
-							<source src="assets/videos/DEMO-REEL_INTRO.mp4" type="video/mp4">
-							Tu navegador no admite la reproducción de videos.
-						</video>
-						<ul class="actions special">
-							<li id="demo-reel-button"><a href="#" class="button primary">See Demo Reel</a></li>
-						</ul>
-					</div>
+					<p>Take a look at the compilation of my work! It is mix of my bachelor's and master's projetcs with some personal ones. I hope you like them :)
+					</p>
+					<ul class="actions special">
+						<li><a href="#" class="button primary">See Demo Reel</a></li>
+					</ul>
 				</div>
 				<a href="#two" class="button style2 down anchored">Next</a>
 			</section>
-		 
 
 		<!-- Two -->
 			<section id="two" class="main style2 left dark fullscreen">
-				<div id="about-me" class="content box style2">
+				<div class="content box style2">
 					<header>
 						<h2>Who I Am</h2>
 					</header>
-					<p>
-						I'm Rafael Polope, a Multimedia Engineering graduate from the University of Valencia and a current student in U-TAD's Master's program for Computer Graphics, VR, and Simulation in Madrid. Passionate about computer graphics, I'm eager for a career shift after three years in web development. Proficient in Unity, Blender, and Unreal, with programming skills in C++, C#, Java, and Python, including libraries like OpenGL and OpenCV. My expertise spans simulation, shaders, video games, animation, and XR. I aspire to craft captivating worlds and immersive experiences, fostering constant learning and improvement. Striving to be a versatile standout professional in computer graphics.
-					  </p>
-					  
-					<!-- <p>
-						I'm Rafael Polope, a graduate in <strong>Multimedia Engineering</strong> from the University of Valencia and a current student in the Master's program in Computer Graphics, VR, and Simulation at U-TAD in Madrid.
-						Passionate about the world of <strong>computer graphics</strong>, I'm seeking a <strong>professional shift</strong> after three years of experience in web development, eager to take my career to new heights.
-						Proficient in <strong>Unity, Blender, and Unreal </strong>, with programming skills in <strong>C++, C#, Java, and Python</strong>, along with libraries like <strong>OpenGL</strong> and <strong>OpenCV</strong>. My expertise extends to <strong>simulation, shaders, video games, animation and XR</strong>.
-						I aspire to create new worlds and immersive experiences that ignite imagination and captivate. Always in a <strong>constant learning and continuous improvement process</strong>, both personally and professionally, I aim to become a versatile and standout professional in computer graphics.
-					</p> -->
-				</div>
-				<div class="style4">
-					<img alt="img" src="images/me-fit.png">
+					<p>Lorem ipsum dolor sit amet et sapien sed elementum egestas dolore condimentum.
+					Fusce blandit ultrices sapien, in accumsan orci rhoncus eu. Sed sodales venenatis arcu,
+					id varius justo euismod in. Curabitur egestas consectetur magna.</p>
 				</div>
 				<a href="#work" class="button style2 down anchored">Next</a>
 			</section>
@@ -95,7 +84,9 @@
 				<div class="content">
 					<header>
 						<h2>My Work</h2>
-						<p>Take a look to my projects! Clicking on the subjects you will see the work I've done related to them! </p>
+						<p>Lorem ipsum dolor sit amet et sapien sed elementum egestas dolore condimentum.
+						Fusce blandit ultrices sapien, in accumsan orci rhoncus eu. Sed sodales venenatis
+						arcu, id varius justo euismod in. Curabitur egestas consectetur magna vitae.</p>
 					</header>
 
 					<!-- Gallery  -->
@@ -174,6 +165,18 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script>
+				document.addEventListener('DOMContentLoaded', function() {
+				const animatedElement = document.querySelector('.main.style2 > .content');
 
+				animatedElement.addEventListener('transitionend', () => {
+					// Verifica si el elemento está en el estado "inactive" y es el elemento correcto
+					if (!animatedElement.classList.contains('inactive') && animatedElement.classList.contains('right')) {
+						// Cambia el display del div con la clase .video cuando la transición ha terminado
+						document.querySelector('.video_').style.display = 'block';
+					}
+				});
+			});
+			</script>
 	</body>
 </html>
