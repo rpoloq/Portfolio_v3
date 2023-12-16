@@ -2004,6 +2004,7 @@ a {
 				-webkit-transform: translateZ(0);
 				-ms-transform: translateZ(0);
 				transform: translateZ(0);
+				transition: transform 1s ease;
 				position: relative;
 				width: 35%;
 				margin: 0;
@@ -2268,6 +2269,7 @@ a {
 		background-repeat: no-repeat;
 		background-size: cover;
 		text-align: center;
+		overflow: hidden;
 	}
 
 	#intro .more {
@@ -2301,8 +2303,17 @@ a {
 		z-index: 1;
 	}
 
+		@keyframes levitate {
+			0%, 100% {
+				transform: translateY(0);
+			}
+			50% {
+				transform: translateY(-0.5em);
+			}
+		}
+		
 		#intro .more:after {
-			background-image: url("images/arrow.svg");
+			background-image: url("images/arrow2.svg");
 			background-position: center;
 			background-repeat: no-repeat;
 			background-size: contain;
@@ -2314,7 +2325,9 @@ a {
 			margin: 0 0 0 -0.75em;
 			position: absolute;
 			width: 1.5em;
+			animation: levitate 2s infinite ease-in-out;
 		}
+		
 
 		body.is-preload #intro .more {
 			-moz-transform: translateY(8.5em);
@@ -2336,6 +2349,13 @@ a {
 		background-size: 256px 256px, cover;
 		background-attachment: fixed, fixed;
 		background-position: top left, center center;
+	}
+
+	.video {
+		width: 100%;
+		padding: 10%;
+		text-align: left;
+		display: none;
 	}
 
 /* Two */
