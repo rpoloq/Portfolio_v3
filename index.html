@@ -10,6 +10,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" crossorigin="anonymous">
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="is-preload">
@@ -42,7 +43,6 @@
 						<!-- <a href="#one" class="button style2 down">See More</a> -->
 					</footer>
 				</div>
-				<a href="#one" class="more scrolly">See more</a>
 			</section>
 
 		<!-- One -->
@@ -51,19 +51,17 @@
 					<header>
 						<h2>What I Do</h2>
 					</header>
-					<p>Lorem ipsum dolor sit amet et sapien sed elementum egestas dolore condimentum. Fusce blandit ultrices sapien, in accumsan orci rhoncus eu. Sed sodales venenatis arcu, id varius justo euismod in. Curabitur egestas consectetur magna.</p>
-					
+					<p> Hey! take a look to my demo reel and see a resume of my projects!</p>					
 					<div class="video-container">
-						<video id="fullscreen-video" style="display: none;" controls width="100%">
-							<source src="assets/videos/DEMO-REEL_INTRO.mp4" type="video/mp4">
-							Tu navegador no admite la reproducción de videos.
+						<video id="demo-reel" controls width="100%">
+							<source src="./videos/DEMO-REEL_INTRO.mp4" type="video/mp4">
+							Your browser does not admit video reproduction.
 						</video>
 						<ul class="actions special">
 							<li id="demo-reel-button"><a href="#" class="button primary">See Demo Reel</a></li>
 						</ul>
 					</div>
 				</div>
-				<a href="#two" class="button style2 down anchored">Next</a>
 			</section>
 		 
 
@@ -85,9 +83,10 @@
 					</p> -->
 				</div>
 				<div class="style4">
-					<img alt="img" src="images/me-fit.png">
+					<div class="img-container">
+						<img alt="img" src="images/yo.jpg">
+					</div>
 				</div>
-				<a href="#work" class="button style2 down anchored">Next</a>
 			</section>
 
 		<!-- Work -->
@@ -101,23 +100,70 @@
 					<!-- Gallery  -->
 						<div class="gallery">
 							<article class="from-left">
-								<a href="images/fulls/01.jpg" class="image fit"><img src="images/thumbs/01.jpg" title="The Anonymous Red" alt="" /></a>
+								<div class="image fit">
+								  <img src="images/thumbs/01.jpg" title="The Anonymous Red" alt="" />
+								  <div class="overlay">
+									<h3>SIMULATION</h3>
+									<p>Project description goes here.</p>
+									<a href="images/thumbs/01.jpg" class="button">View Project</a>
+								  </div>
+								</div>
 							</article>
 							<article class="from-right">
-								<a href="images/fulls/02.jpg" class="image fit"><img src="images/thumbs/02.jpg" title="Airchitecture II" alt="" /></a>
-							</article>
-							<article class="from-left">
-								<a href="images/fulls/03.jpg" class="image fit"><img src="images/thumbs/03.jpg" title="Air Lounge" alt="" /></a>
-							</article>
-							<article class="from-right">
-								<a href="images/fulls/04.jpg" class="image fit"><img src="images/thumbs/04.jpg" title="Carry on" alt="" /></a>
-							</article>
-							<article class="from-left">
-								<a href="images/fulls/05.jpg" class="image fit"><img src="images/thumbs/05.jpg" title="The sparkling shell" alt="" /></a>
-							</article>
-							<article class="from-right">
-								<a href="images/fulls/06.jpg" class="image fit"><img src="images/thumbs/06.jpg" title="Bent IX" alt="" /></a>
-							</article>
+								<div class="image fit">
+								  <img src="images/thumbs/02.jpg" title="Airchitecture II" alt="" />
+								  <div class="overlay">
+									<h3>EXTENDED REALITY</h3>
+									<p>Project description goes here.</p>
+									<a href="images/fulls/02.jpg" class="button">View Project</a>
+								  </div>
+								</div>
+							  </article>
+							  
+							  <article class="from-left">
+								<div class="image fit">
+								  <img src="images/thumbs/03.jpg" title="Air Lounge" alt="" />
+								  <div class="overlay">
+									<h3>VIDEOGAMES</h3>
+									<p>Project description goes here.</p>
+									<a href="images/fulls/03.jpg" class="button">View Project</a>
+								  </div>
+								</div>
+							  </article>
+							  
+							  <article class="from-right">
+								<div class="image fit">
+								  <img src="images/thumbs/04.jpg" title="Carry on" alt="" />
+								  <div class="overlay">
+									<h3>SHADERS</h3>
+									<p>Project description goes here.</p>
+									<a href="images/fulls/04.jpg" class="button">View Project</a>
+								  </div>
+								</div>
+							  </article>
+							  
+							  <article class="from-left">
+								<div class="image fit">
+								  <img src="images/thumbs/05.jpg" title="The sparkling shell" alt="" />
+								  <div class="overlay">
+									<h3>COMPUTER GRAPHICS</h3>
+									<p>Project description goes here.</p>
+									<a href="images/fulls/05.jpg" class="button">View Project</a>
+								  </div>
+								</div>
+							  </article>
+							  
+							  <article class="from-right">
+								<div class="image fit">
+								  <img src="images/thumbs/06.jpg" title="Bent IX" alt="" />
+								  <div class="overlay">
+									<h3>BLENDER TOOLS</h3>
+									<p>Project description goes here.</p>
+									<a href="images/fulls/06.jpg" class="button">View Project</a>
+								  </div>
+								</div>
+							  </article>
+							  
 						</div>
 
 				</div>
@@ -164,7 +210,9 @@
 					</ul>
 
 			</footer>
-
+			<a id="scroll-link" href="" class="more scrolly">
+				<i class="fas fa-chevron-down"></i> See more
+			</a>
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.poptrox.min.js"></script>
@@ -174,6 +222,26 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script>
+				var video = document.getElementById('demo-reel');
 
+				if (document.fullscreenEnabled) {
+
+					document.getElementById('demo-reel-button').addEventListener('click', function () {
+						video.requestFullscreen();
+						video.play();
+					});
+				}
+
+				document.addEventListener('fullscreenchange', function () {
+				var fullscreenElement = document.fullscreenElement || document.mozFullScreenElement || document.webkitFullscreenElement;
+
+					if (!fullscreenElement) {
+						video.pause();
+					}
+				});
+			</script>
+
+		
 	</body>
 </html>

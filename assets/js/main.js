@@ -1,15 +1,10 @@
-/*
-	Big Picture by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
-
 (function($) {
 
 	var	$window = $(window),
 		$body = $('body'),
 		$header = $('#header'),
 		$all = $body.add($header);
+		$scrollLink = $('#scroll-link');
 
 	// Breakpoints.
 		breakpoints({
@@ -122,7 +117,8 @@
 							delay:		50,
 							initialize:	function() { $(this).addClass('inactive'); },
 							terminate:	function() { $(this).removeClass('inactive'); },
-							enter:		function() { $(this).removeClass('inactive'); },
+							enter:		function() { $(this).removeClass('inactive'); 
+													 updateScrollLink('contact');},
 							leave:		function() { $(this).addClass('inactive'); }
 						});
 
@@ -133,7 +129,8 @@
 							delay:		100,
 							initialize:	function() { $(this).addClass('inactive'); },
 							terminate:	function() { $(this).removeClass('inactive'); },
-							enter:		function() { $(this).removeClass('inactive'); },
+							enter:		function() { $(this).removeClass('inactive');
+													 updateScrollLink('one')},
 							leave:		function() { $(this).addClass('inactive'); }
 						});
 
@@ -143,7 +140,10 @@
 							delay:		100,
 							initialize:	function() { $(this).addClass('inactive'); },
 							terminate:	function() { $(this).removeClass('inactive'); },
-							enter:		function() { $(this).removeClass('inactive'); },
+							enter:		function() { $(this).removeClass('inactive');
+													 $(this).attr('id') === "one"
+														? updateScrollLink('two')
+														: updateScrollLink('work');},
 							leave:		function() { $(this).addClass('inactive'); }
 						});
 
@@ -157,7 +157,6 @@
 							enter:		function() { $(this).removeClass('inactive'); },
 							leave:		function() { $(this).addClass('inactive'); }
 						});
-
 			};
 
 			var off = function() {
@@ -216,31 +215,13 @@
 				$window.trigger('resize');
 			});
 
-})(jQuery);
+	function updateScrollLink(nextSectionId)
+	{
+		$scrollLink.attr('href', '#' + nextSectionId);
+		$('a[href^="#"]').scrolly({
+			speed: 1500,
+			offset: $header.outerHeight()
+		});
+	}
 
-// (function($) {
-// 	$(document).ready(function() {
-// 	   var video = document.getElementById('fullscreen-video');
-// 	   var videoContainer = document.querySelector('.video-container');
-// 	   var fullscreenButton = document.getElementById('demo-reel-button');
- 
-// 	   fullscreenButton.addEventListener('click', function() {
-// 		  if (video.requestFullscreen) {
-// 			 videoContainer.requestFullscreen();
-// 		  } else if (video.mozRequestFullScreen) {
-// 			 videoContainer.mozRequestFullScreen();
-// 		  } else if (video.webkitRequestFullscreen) {
-// 			 videoContainer.webkitRequestFullscreen();
-// 		  } else if (video.msRequestFullscreen) {
-// 			 videoContainer.msRequestFullscreen();
-// 		  }
-// 	   });
- 
-// 	   // Agrega un manejador de eventos para salir de la pantalla completa
-// 	   $(document).on('fullscreenchange', function() {
-// 		  if (!document.fullscreenElement && !document.webkitIsFullScreen && !document.mozFullScreen && !document.msFullscreenElement) {
-// 			 // Salir de la pantalla completa, puedes realizar acciones adicionales aquí si es necesario.
-// 		  }
-// 	   });
-// 	});
-//  })(jQuery);
+})(jQuery);
