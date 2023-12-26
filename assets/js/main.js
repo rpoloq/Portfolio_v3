@@ -71,7 +71,21 @@
 				.triggerHandler('resize.ie-flexbox-fix');
 
 		}
-		
+	
+	// Night Mode
+	$nightModeIcon.click(function() {
+		var currentSrc = $(this).attr('src');
+	
+		var dayModeImage = 'assets/css/images/light-mode.svg';
+		var nightModeImage = 'assets/css/images/night-mode.svg';
+	
+		if (currentSrc === dayModeImage) {
+			$(this).attr('src', nightModeImage);
+		} else {
+			$(this).attr('src', dayModeImage);
+		}
+	});
+
 	// Gallery.
 		$window.on('load', function() {
 
