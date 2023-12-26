@@ -75,14 +75,26 @@
 	// Night Mode
 	$nightModeIcon.click(function() {
 		var currentSrc = $(this).attr('src');
-	
+		
+		var lightModeBackground = '##f5f6f7'; // Reemplaza con el color de fondo original
+    	var nightModeBackground = '#39454b'; // Reemplaza con el nuevo color de fondo deseado
+
+
 		var dayModeImage = 'assets/css/images/light-mode.svg';
 		var nightModeImage = 'assets/css/images/night-mode.svg';
 	
 		if (currentSrc === dayModeImage) {
 			$(this).attr('src', nightModeImage);
+			$('#one').css('background', '');
+			$('#two').css('background', '');
+			$('.main.style3.secondary').css('background', '');
+			$('.main.style3.secondary h2').css('color', '#39454b');
 		} else {
 			$(this).attr('src', dayModeImage);
+			$('#one').css('background', nightModeBackground);
+			$('#two').css('background', nightModeBackground);
+			$('.main.style3.secondary').css('background', nightModeBackground);
+			$('.main.style3.secondary h2').css('color', '#ffffff');
 		}
 	});
 
@@ -169,8 +181,10 @@
 							delay:		50,
 							initialize:	function() { $(this).addClass('inactive'); },
 							terminate:	function() { $(this).removeClass('inactive'); },
-							enter:		function() { $(this).removeClass('inactive'); },
-							leave:		function() { $(this).addClass('inactive'); }
+							enter:		function() { $(this).removeClass('inactive'); 
+													 updateScrollLink('contact-enter')},
+							leave:		function() { $(this).addClass('inactive'); 
+													 updateScrollLink('contact-leave')}
 						});
 			};
 
@@ -232,7 +246,17 @@
 
 	function updateScrollLink(nextSectionId)
 	{
-		$scrollLink.attr('href', '#' + nextSectionId);
+		if (!nextSectionId.includes("contact"))
+		{
+			$scrollLink.attr('href', '#' + nextSectionId);
+		}else{
+			if (nextSectionId == "contact-enter"){
+				$scrollLink.css('display', 'none');
+			}
+			else {
+				$scrollLink.css('display', '');
+			}
+		}
 		$('a[href^="#"]').scrolly({
 			speed: 1500,
 			offset: $header.outerHeight()
