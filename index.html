@@ -10,6 +10,35 @@
 	</head>
 	<body class="is-preload">
 
+		<style>
+			.notch {
+				background-color: rgb(0,0,0);
+				position: absolute;
+				transition-property: opacity;
+				transition-duration: var(600ms);
+				transition-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);
+				transition-delay: 1160ms;
+				opacity: 1;
+				clip-path: polygon(0 -1px, 100% -1px, calc(100% - 10px) 100%, 10px 100%);
+				width: 64px;
+				height: 20px;
+				bottom: 13%;
+				left: 45%;
+			} 
+
+
+			@media screen and (max-width: 1000px) {
+				.notch {
+					bottom: 8%;
+				}
+			}
+
+			@media screen and (max-width: 360px) {
+				.notch {
+					left: 40%;
+				}
+			}
+		</style>
 		<!-- Header -->
 			<header id="header">
 				<img class="night-mode-icon" alt="night-mode" src="assets/css/images/night-mode.svg">
