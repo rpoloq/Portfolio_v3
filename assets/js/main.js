@@ -76,7 +76,6 @@
 	$nightModeIcon.click(function() {
 		var currentSrc = $(this).attr('src');
 		
-		var lightModeBackground = '##f5f6f7'; // Reemplaza con el color de fondo original
     	var nightModeBackground = '#39454b'; // Reemplaza con el nuevo color de fondo deseado
 
 

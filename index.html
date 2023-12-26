@@ -77,6 +77,7 @@
 						<source src="./videos/DEMO-REEL_INTRO.mp4" type="video/mp4">
 						Tu navegador no admite la reproducción de videos.
 					</video>
+					<div class="notch"></div>
 				</div>
 				<div class="content box style2">
 					<header>
@@ -85,12 +86,6 @@
 					<p>Take a look at my demo reel!</p>
 					<p>Here is a summary of my projects. I have compiled a mix of my works to showcase my skills in the simulation of fluids, particles, flocking agents, etc., in video games and immersive experiences. Additionally, I demonstrate my knowledge of computer graphics through my work on a render engine with ray tracing, shaders with GLSL, and Blender tools.</p>
 					<p>Hope you enjoy it! 😄</p>
-
-					<!-- <div class="video-container">
-						<ul class="actions special">
-							<li id="demo-reel-button"><a href="#" class="button primary">See Demo Reel</a></li>
-						</ul>
-					</div> -->
 				</div>
 			</section>
 
@@ -261,24 +256,6 @@
 				
 				
 				VanillaTilt.init(document.querySelectorAll(".video-container"));
-
-				var video = document.getElementById('demo-reel');
-
-				if (document.fullscreenEnabled) {
-
-					document.getElementById('demo-reel-button').addEventListener('click', function () {
-						// video.requestFullscreen();
-						video.play();
-					});
-				}
-
-				document.addEventListener('fullscreenchange', function () {
-				var fullscreenElement = document.fullscreenElement || document.mozFullScreenElement || document.webkitFullscreenElement;
-
-					if (!fullscreenElement) {
-						video.pause();
-					}
-				});
 			</script>
 
 		
