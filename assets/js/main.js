@@ -5,6 +5,7 @@
 		$header = $('#header'),
 		$all = $body.add($header);
 		$scrollLink = $('#scroll-link');
+		$nightModeIcon = $('.night-mode-icon');
 
 	// Breakpoints.
 		breakpoints({
@@ -70,7 +71,7 @@
 				.triggerHandler('resize.ie-flexbox-fix');
 
 		}
-
+		
 	// Gallery.
 		$window.on('load', function() {
 
