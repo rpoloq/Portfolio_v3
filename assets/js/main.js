@@ -3,8 +3,9 @@
 	var	$window = $(window),
 		$body = $('body'),
 		$header = $('#header'),
-		$all = $body.add($header);
-		$scrollLink = $('#scroll-link');
+		$all = $body.add($header),
+		$scrollLink = $('#scroll-link'),
+		$banner = $('#banner'),
 		$nightModeIcon = $('.night-mode-icon');
 
 	// Breakpoints.
@@ -72,31 +73,61 @@
 
 		}
 	
-	// Night Mode
-	$nightModeIcon.click(function() {
-		var currentSrc = $(this).attr('src');
+	// Menu.
+		$('#menu')
+			.append('<a href="#menu" class="close"></a>')
+			.appendTo($body)
+			.panel({
+				delay: 500,
+				hideOnClick: true,
+				hideOnSwipe: true,
+				resetScroll: true,
+				resetForms: true,
+				side: 'right',
+				target: $body,
+				visibleClass: 'is-menu-visible'
+			});
+
+		// Header.
+		// if ($banner.length > 0
+		// &&	$header.hasClass('alt')) {
+
+		// 	$window.on('resize', function() { $window.trigger('scroll'); });
+
+		// 	$banner.scrollex({
+		// 		bottom:		$header.outerHeight() + 1,
+		// 		terminate:	function() { $header.removeClass('alt'); },
+		// 		enter:		function() { $header.addClass('alt'); },
+		// 		leave:		function() { $header.removeClass('alt'); }
+		// 	});
+
+		// }
 		
-    	// var nightModeBackground = '#39454b'; // Reemplaza con el nuevo color de fondo deseado
-    	var nightModeBackground = '#222222'; // Reemplaza con el nuevo color de fondo deseado
+		// Night Mode
+		$nightModeIcon.click(function() {
+			var currentSrc = $(this).attr('src');
+			
+			// var nightModeBackground = '#39454b'; // Reemplaza con el nuevo color de fondo deseado
+			var nightModeBackground = '#222222'; // Reemplaza con el nuevo color de fondo deseado
 
 
-		var dayModeImage = 'assets/css/images/light-mode.svg';
-		var nightModeImage = 'assets/css/images/night-mode.svg';
-	
-		if (currentSrc === dayModeImage) {
-			$(this).attr('src', nightModeImage);
-			$('#one').css('background', '');
-			$('#two').css('background', '');
-			$('.main.style3.secondary').css('background', '');
-			$('.main.style3.secondary h2').css('color', '#39454b');
-		} else {
-			$(this).attr('src', dayModeImage);
-			$('#one').css('background', nightModeBackground);
-			$('#two').css('background', nightModeBackground);
-			$('.main.style3.secondary').css('background', nightModeBackground);
-			$('.main.style3.secondary h2').css('color', '#ffffff');
-		}
-	});
+			var dayModeImage = 'assets/css/images/light-mode.svg';
+			var nightModeImage = 'assets/css/images/night-mode.svg';
+		
+			if (currentSrc === dayModeImage) {
+				$(this).attr('src', nightModeImage);
+				$('#one').css('background', '');
+				$('#two').css('background', '');
+				$('.main.style3.secondary').css('background', '');
+				$('.main.style3.secondary h2').css('color', '#39454b');
+			} else {
+				$(this).attr('src', dayModeImage);
+				$('#one').css('background', nightModeBackground);
+				$('#two').css('background', nightModeBackground);
+				$('.main.style3.secondary').css('background', nightModeBackground);
+				$('.main.style3.secondary h2').css('color', '#ffffff');
+			}
+		});
 
 	// Gallery.
 		$window.on('load', function() {
@@ -150,7 +181,7 @@
 						});
 
 				// Generic sections.
-					$('.main.style1')
+					$('#banner')
 						.scrollex({
 							mode:		'middle',
 							delay:		100,
@@ -173,6 +204,18 @@
 													 $(this).attr('id') === "one"
 														? updateScrollLink('two')
 														: updateScrollLink('work');},
+							leave:		function() { $(this).addClass('inactive'); }
+						});
+					
+				// Work
+					$('#work')
+						.scrollex({
+							mode:		'middle',
+							delay:		100,
+							initialize:	function() { $(this).addClass('inactive'); },
+							terminate:	function() { $(this).removeClass('inactive'); },
+							enter:		function() { $(this).removeClass('inactive');
+													 updateScrollLink('contact');},
 							leave:		function() { $(this).addClass('inactive'); }
 						});
 
@@ -248,10 +291,8 @@
 
 	function updateScrollLink(nextSectionId)
 	{
-		if (!nextSectionId.includes("contact"))
+		if (nextSectionId.includes("contact"))
 		{
-			$scrollLink.attr('href', '#' + nextSectionId);
-		}else{
 			if (nextSectionId == "contact-enter"){
 				$scrollLink.css('display', 'none');
 			}
@@ -259,6 +300,7 @@
 				$scrollLink.css('display', '');
 			}
 		}
+		$scrollLink.attr('href', '#' + nextSectionId);
 		$('a[href^="#"]').scrolly({
 			speed: 1500,
 			offset: $header.outerHeight()
