@@ -76,7 +76,8 @@
 	$nightModeIcon.click(function() {
 		var currentSrc = $(this).attr('src');
 		
-    	var nightModeBackground = '#39454b'; // Reemplaza con el nuevo color de fondo deseado
+    	// var nightModeBackground = '#39454b'; // Reemplaza con el nuevo color de fondo deseado
+    	var nightModeBackground = '#222222'; // Reemplaza con el nuevo color de fondo deseado
 
 
 		var dayModeImage = 'assets/css/images/light-mode.svg';
@@ -156,8 +157,10 @@
 							initialize:	function() { $(this).addClass('inactive'); },
 							terminate:	function() { $(this).removeClass('inactive'); },
 							enter:		function() { $(this).removeClass('inactive');
-													 updateScrollLink('one')},
-							leave:		function() { $(this).addClass('inactive'); }
+													 updateScrollLink('one');
+													 $scrollLink.css('color', '');},
+							leave:		function() { $(this).addClass('inactive'); 
+													 $scrollLink.css('color', 'darkgray');}
 						});
 
 					$('.main.style2')
