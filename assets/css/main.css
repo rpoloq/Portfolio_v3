@@ -2647,7 +2647,7 @@ a {
 				}
 
 	#header.alt {
-		background: transparent;
+		/* background: transparent; */
 		box-shadow: none !important;
 	}
 
@@ -3014,6 +3014,7 @@ a {
 			position: sticky !important;
 			bottom: 5% !important;
 			scroll-behavior: smooth;
+			background-color: transparent;
 		}
 
 		.more.scrolly i {
