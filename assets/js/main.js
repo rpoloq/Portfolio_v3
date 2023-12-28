@@ -88,20 +88,25 @@
 				visibleClass: 'is-menu-visible'
 			});
 
+		$(".menuToggle, .close").on("click", function() {
+			e.preventDefault();
+		});
+		
+
 		// Header.
-		// if ($banner.length > 0
-		// &&	$header.hasClass('alt')) {
+			// if ($banner.length > 0
+			// &&	$header.hasClass('alt')) {
 
-		// 	$window.on('resize', function() { $window.trigger('scroll'); });
+			// 	$window.on('resize', function() { $window.trigger('scroll'); });
 
-		// 	$banner.scrollex({
-		// 		bottom:		$header.outerHeight() + 1,
-		// 		terminate:	function() { $header.removeClass('alt'); },
-		// 		enter:		function() { $header.addClass('alt'); },
-		// 		leave:		function() { $header.removeClass('alt'); }
-		// 	});
+			// 	$banner.scrollex({
+			// 		bottom:		$header.outerHeight() + 1,
+			// 		terminate:	function() { $header.removeClass('alt'); },
+			// 		enter:		function() { $header.addClass('alt'); },
+			// 		leave:		function() { $header.removeClass('alt'); }
+			// 	});
 
-		// }
+			// }
 		
 		// Night Mode
 		$nightModeIcon.click(function() {
