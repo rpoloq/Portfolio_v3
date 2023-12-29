@@ -1890,7 +1890,7 @@ a {
 
 /* Header */
 
-	#header {
+	/* #header {
 		position: fixed;
 		z-index: 10000;
 		left: 0;
@@ -1964,9 +1964,9 @@ a {
 						font-size: 1em;
 					}
 
-				#header nav {
-					display: none;
-				}
+				 #header nav {
+					display: inline-block;
+				} 
 
 		}
 
@@ -1980,7 +1980,7 @@ a {
 				padding-top: 2.5em;
 			}
 
-		}
+		} */
 
 /* Main */
 
