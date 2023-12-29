@@ -2248,6 +2248,7 @@ a {
 			background-repeat: no-repeat;
 			background-size: cover;
 			text-align: center;
+			color: white;
 		}
 	
 			#main > header h2 {
@@ -2315,7 +2316,6 @@ a {
 		-ms-transition: opacity 0.5s ease;
 		transition: opacity 0.5s ease;
 		opacity: 1;
-		padding-top: 3em;
 	}
 
 		#page-wrapper:before {
@@ -2461,6 +2461,7 @@ a {
 	top: 0;
 	left: 1em;
 	height: 3em;
+	color: white;
 	/* line-height: 3em; */
 	cursor: default; 
 }
