@@ -742,7 +742,6 @@ a {
 			
 			font-weight: bold;
 			color: white;
-			text-shadow: -2px -2px 2px black, 2px -2px 2px black, -2px 2px 2px black, 2px 2px 2px black;
 		}
 
 		input[type="button"].style2,
@@ -1880,12 +1879,13 @@ a {
 		  
 		  #work .gallery article .overlay h3 {
 			margin: 0;
-			font-size: 1.5em; /* Tamaño del texto */
+			font-size: 1.5em;
 		  }
 		  
 		  #work .gallery article .overlay p {
 			margin: 0;
-			font-size: 1em; /* Tamaño del texto */
+			font-size: 1em;
+			padding: 5% 10%;
 		  }
 
 /* Main */
