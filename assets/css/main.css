@@ -2471,6 +2471,7 @@ a {
 	display: block;
 	height: inherit;
 	line-height: inherit;
+	color: white !important;
 	/* font-size: 1.25em; */
 	/* font-size: 1.25em; */
 }

@@ -159,7 +159,7 @@ input, select, textarea {
 	}
 
 	p {
-		margin: 0 0 2em 0;
+		/* margin: 0 0 2em 0; */
 	}
 
 	h1, h2, h3, h4, h5, h6 {
@@ -2792,7 +2792,7 @@ input, select, textarea {
 	}
 
 		.wrapper > .inner {
-			width: 60em;
+			width: 90%;
 			margin: 0 auto;
 		}
 
@@ -3142,6 +3142,7 @@ input, select, textarea {
 			background-color: transparent;
 		}
 
+
 		.wrapper.style5 {
 			background-color: #ffffff;
 			color: #4E4852;
@@ -3316,6 +3317,49 @@ input, select, textarea {
 			}
 
 		}
+
+/* Projects */ 
+
+.project-section-title {
+	font-size: 2.5em;
+    line-height: 0;
+}
+.project-view {
+	height: 350px;
+}
+.project-title {
+	background: linear-gradient(to right, #2E3842, transparent);
+	padding: 5px;
+	color: white !important;
+	border-radius: 3px;
+}
+.project-content {
+	display: flex;
+	justify-content: flex-start;
+	margin-bottom: 10%;
+}
+
+.project-description {
+	padding: 0 3%;
+	line-height: 2.15rem;
+}
+
+@media screen and (max-width: 1280px) {
+
+	.project-content {
+		flex-direction: column;
+	}
+
+	
+	.project-description {
+		padding: 3% 0;
+	}
+
+}
+
+.spanish {
+	display: none;
+}
 
 /* Page Wrapper + Menu */
 
