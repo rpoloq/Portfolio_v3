@@ -3320,12 +3320,26 @@ input, select, textarea {
 
 /* Projects */ 
 
+/* .project-section {
+	display: flex;
+	justify-content: space-around;
+} */
 .project-section-title {
 	font-size: 2.5em;
     line-height: 0;
 }
 .project-view {
 	height: 350px;
+	width: auto;
+}
+.project-view.vertical{
+	display: flex;
+	justify-content: space-evenly;
+	width: 70%;
+	height: auto;
+}
+.project-view.vertical img {
+	margin: 0 20px
 }
 .project-title {
 	background: linear-gradient(to right, #2E3842, transparent);
@@ -3334,27 +3348,60 @@ input, select, textarea {
 	border-radius: 3px;
 }
 .project-content {
+	width: 100% !important;
 	display: flex;
 	justify-content: flex-start;
 	margin-bottom: 10%;
 }
 
 .project-description {
-	padding: 0 3%;
+	padding: 3% 3%;
 	line-height: 2.15rem;
 }
+
 
 @media screen and (max-width: 1280px) {
 
 	.project-content {
 		flex-direction: column;
+		justify-content: center;
 	}
+	.project-view {
+		width: 60%;
+		height: auto;
+		margin: auto;
+	}
+	.project-content{
+		width: 60%;
+	}
+	.project-description{
+		width: 60%;
+		margin: auto;
+	}
+	.project-view.vertical {
+		width: 100%;
+	}
+}
 
+@media screen and (max-width: 1000px) {
 	
 	.project-description {
 		padding: 3% 0;
 	}
+	.project-view.vertical{
+		flex-direction: column;
+		justify-content: center;
+		width: 50%;
+	}
+}
 
+@media screen and (max-width: 760px) {
+
+	.project-view {
+		width: 100%;
+		height: auto;
+		margin: auto;
+	}
 }
 
 .spanish {
