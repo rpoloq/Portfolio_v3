@@ -8,6 +8,15 @@
 		$banner = $('#banner'),
 		$nightModeIcon = $('.night-mode-icon');
 
+	init_typing = function() {
+		$('#typing').typed({
+			strings: ['RAFAEL POLOPE CONTRERAS', 'MULTIMEDIA ENGINEER', '<span class="higl">3D</span> DEVELOPER'],
+			typeSpeed: 5,
+			startDelay: 2500,
+			backDelay: 1500
+		});
+	}
+
 	// Breakpoints.
 		breakpoints({
 			xxlarge: [ '1681px',  '1920px' ],
@@ -279,6 +288,7 @@
 			})
 			.on('load', function() {
 				$window.trigger('resize');
+				init_typing();
 			});
 
 	function updateScrollLink(nextSectionId)
