@@ -9,12 +9,15 @@
 		$nightModeIcon = $('.night-mode-icon');
 
 	init_typing = function() {
-		$('#typing').typed({
-			strings: ['RAFAEL POLOPE CONTRERAS', 'MULTIMEDIA ENGINEER', '<span class="higl">3D</span> DEVELOPER'],
-			typeSpeed: 5,
-			startDelay: 2500,
-			backDelay: 1500
-		});
+		if ($('#typing'))
+		{
+			$('#typing').typed({
+				strings: ['RAFAEL POLOPE CONTRERAS', 'MULTIMEDIA ENGINEER', '<span class="higl">3D</span> DEVELOPER'],
+				typeSpeed: 5,
+				startDelay: 2500,
+				backDelay: 1500
+			});
+		}
 	}
 
 	// Breakpoints.
