@@ -3329,8 +3329,7 @@ input, select, textarea {
 	width: auto;
 }
 iframe.project-view {
-    width: 60%;
-    height: 450px; /* Ajusta la altura según sea necesario */
+    width: 100%;
     margin: auto;
     display: block;
 }
