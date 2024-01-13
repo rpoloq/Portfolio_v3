@@ -28,8 +28,9 @@
 										<ul>
 											<li><a href="#fluids">Fluids</a></li>
 											<li><a href="#terrains">Terrains</a></li>
-											<li><a href="#rigid-body">Rigid Body</a></li>
-											<li><a href="#soft-body">Soft Body</a></li>
+											<li><a href="#mass-spring">Mass-Spring</a></li>
+											<li><a href="#rigid-bodies">Rigid Body</a></li>
+											<li><a href="#soft-bodies">Soft Body</a></li>
 											<li><a href="#flocking">Flocking</a></li>
 											<li><a href="#particles">Particles</a></li>
 											<li><a href="#waves">Waves</a></li>
@@ -134,7 +135,7 @@
 
 								<h3 class="project-title">Flags (2D-Springs)</h3>
 								<div class="project-content">
-									<iframe class="project-view" src="https://youtube.com/embed/Jy_YtAcyx_g" frameborder="0" allowfullscreen title="flags"></iframe>
+									<iframe class="project-view" src="https://youtube.com/embed/9_rl9riU78c" frameborder="0" allowfullscreen title="flags"></iframe>
 									<div class="spanish project-description">
 										<p>Esta es una simulación de telas realizada durante mis estudios de ingeniería multimedia, durante el tercer en la asignatura de simualción. En ella se simula el comportamiento de banderas con y sin viento usando diferentes tipos de configuración de malla. Para este ejercicio se utilizaron tres tipos de estructuras: structured, bend y shreded. La simulación esta realizada en Processing y en ella se observa las diferencia entre las diferentes estructuras así como el resultado de hace combinaciones de varios tipos de entramados.</p>
 									</div>
@@ -142,10 +143,33 @@
 										<p>This is a fabric simulation created during my multimedia engineering studies, in the third year of the simulation course. It simulates the behavior of flags with and without wind using different mesh configurations. Three types of structures were used for this exercise: structured, bend, and shredded. The simulation is implemented in Processing, showcasing the differences between the various structures as well as the result of combining several types of meshes.</p>
 									</div>
 								</div>
+
+								<h3 class="project-title">Deformable 2D-Mesh (Breakeble)</h3>
+								<div class="project-content">
+									<img class="project-view" src="/projects/clips/rotura-malla.gif" alt="deformable-mesh"/>
+									<div class="spanish project-description">
+										<p>Esta simulación en Processing es una continuación de la experimentación con las simulaciones de mallas 2D basadas en el modelo masa muelle. En este caso se experimenta con la posibilidad de crear una malla deformable con ruputra si se excede una elongación límite entre nodos contiguos.</p>
+										<p>En esta simulación se experimenta con una constante elástica muy baja, por lo que apenas se da lugar a la elongación de la malla. De esta manera, se sobrepasa enseguida el límite de elongación y se produce la fractura de la mesh, dando como resutlado que algunos pequeños trozos de tela queden flotando dando la ilusión de que es un material sólido no deformable</p>
+									</div>
+									<div class="english project-description">
+										<p>This Processing simulation is a continuation of the experimentation with 2D mesh simulations based on the mass-spring model. In this case, the possibility of creating a deformable mesh with rupture if an elongation limit between contiguous nodes is exceeded is explored.</p>									
+										<p>This simulation explores a very low elastic constant, resulting in minimal elongation of the mesh. In this way, the elongation limit is quickly exceeded, leading to the fracture of the mesh. As a result, some small pieces of the mesh remain floating, creating the illusion of a non-deformable solid material.</p>
+									</div>
+								</div>
+								<h3 class="project-title">Deformable 2D-Mesh (Breakeble)</h3> 
+								<div class="project-content">
+									<iframe class="project-view" src="https://youtube.com/embed/SUXgtQJ_7us" frameborder="0" allowfullscreen title="flags"></iframe>
+									<div class="spanish project-description">
+										<p>Simulación similar a la anterior donde esta vez a la malla se le elimina la posibilidad de romperse y se le da una constante elástica mayore experiemnto sirivó para detectar comportamientos particulares de los sitemas de integración numérica como que la tela sea atravesada por la actualización de posición entre disitntos fotogramas. En la sigueinte sección se podrán observar otras simulaciones con un modelo distinto (PBD) que sirve para solucionar este tipo de casuísticas.</p>
+									</div>
+									<div class="english project-description">
+										<p>Similar to the previous simulation, this time the mesh is prevented from breaking, and a higher elastic constant is applied. The experiment served to identify particular behaviors of numerical integration systems, such as the fabric being penetrated by the position update between different frames. In the next section, other simulations with a different model (PBD) will be presented, addressing such scenarios.</p>									
+									</div>
+								</div>
 							</div>
 						</section>
 
-						<section id="mass-spring" class="wrapper style5">
+						<section id="soft-bodies" class="wrapper style5">
 							<div class="inner">
 
 								<h2 class="project-section-title">Soft Bodies</h2>
@@ -155,10 +179,28 @@
 								<div class="project-content">
 									<iframe class="project-view" src="https://youtube.com/embed/9_rl9riU78c" frameborder="0" allowfullscreen title="flags"></iframe>
 									<div class="spanish project-description">
-										<p>En esta simulación de Processing realizada también durante mis estudios de grado de nuevo nos encontramos con una simulación de telas, pero esta vez bajo un modelo distinto. En esta simulación se emplea </p>
+										<p>En esta simulación de Processing realizada también durante mis estudios de grado de nuevo nos encontramos con una simulación de telas, pero esta vez bajo un modelo distinto. En esta simulación se emplea un modelo basado en un paper de <a href="https://www.cs.toronto.edu/~jacobson/seminar/mueller-et-al-2007.pdf">Muller et al. (2007) sobre Position Based Dynamics (PBD). Este enfoque, en lugar de utilizar velocidades, se centra directamente en las posiciones, permitiendo evitar problemas de integración en sistemas basados en fuerzas. Una de las características esenciales que destacan en este modelo es el uso de restricciones para el cálculo de las nuevas posiciones. En el vídeo, se observa que los colores de las uniones entre los nodos de la malla tienen un color entre blanco y rojo, siendo más rojo cuando las distancias entre nodos cumplen menos con las restricciones establecidas. </p>
 									</div>
 									<div class="english project-description">
-										<p>This is a fabric simulation created during my multimedia engineering studies, in the third year of the simulation course. It simulates the behavior of flags with and without wind using different mesh configurations. Three types of structures were used for this exercise: structured, bend, and shredded. The simulation is implemented in Processing, showcasing the differences between the various structures as well as the result of combining several types of meshes.</p>
+										<p>In this Processing simulation, also conducted during my undergraduate studies, we encounter a cloth simulation, but this time under a different model. This simulation employs an approach based on a paper by <a href="https://www.cs.toronto.edu/~jacobson/seminar/mueller-et-al-2007.pdf">Muller et al. (2007) on Position Based Dynamics (PBD)</a>. This approach, instead of relying on velocities, focuses directly on positions, avoiding integration problems in force-based systems. One of the essential features highlighted in this model is the use of constraints for calculating new positions. In the video, you can observe that the colors of the connections between the mesh nodes range from white to red, with a deeper red indicating less compliance with the established constraints.</p>								
+								</div>
+							</div>
+						</section>
+
+						<section id="rigid-bodies" class="wrapper style5">
+							<div class="inner">
+
+								<h2 class="project-section-title">Rigid Bodies</h2>
+								<hr />
+
+								<h3 class="project-title">Angular Velocity</h3> 
+								<div class="project-content">
+									<iframe class="project-view" src="https://youtube.com/embed/9_rl9riU78c" frameborder="0" allowfullscreen title="flags"></iframe>
+									<div class="spanish project-description">
+										<p>En esta simulación se realiza el cálculo de la velocidad angular que corresponde a la rotación realizada por una esfera desplazandose sin que se produzca deslizamiento. En este ejercicio simple se realizó un cálculo de dicha rotación para que el movimiento de la esfera fuese acorde con su rotación, haciendo que parezca que es la rotación quien imprime movimeinto linel.
+									</div>
+									<div class="english project-description">
+										<p>In this Processing simulation, also carried out during my undergraduate studies, we encounter a cloth simulation, but this time under a different model. This simulation employs an approach based on a paper by <a href="https://www.cs.toronto.edu/~jacobson/seminar/mueller-et-al-2007.pdf">Muller et al. (2007) on Position Based Dynamics (PBD)</a>. This approach, instead of relying on velocities, focuses directly on positions, avoiding integration problems in force-based systems. One of the key features highlighted in this model is the use of constraints for calculating new positions.</p>									
 									</div>
 								</div>
 							</div>
