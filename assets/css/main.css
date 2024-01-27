@@ -1353,7 +1353,7 @@ a {
 		}
 
 			.nav-next:before {
-				right: 0;
+				right: 32px;
 			}
 
 		.nav-previous {
@@ -1361,7 +1361,7 @@ a {
 		}
 
 			.nav-previous:before {
-				left: 0;
+				left: 32px;
 			}
 
 		.poptrox-popup .closer {
@@ -2078,7 +2078,7 @@ a {
 
 		#two .slider {
 			width: 100%;
-			margin:7%;
+			/* margin:7%; */
 			display: flex;
 			justify-content: center;
 			/* border-radius: 100%; */
@@ -2257,19 +2257,29 @@ a {
 
 /* 3D Slider */
 
+.style4 > .slider {
+
+	align-self: flex-start;
+}
+
+.slider {
+	height: 650px;
+}
+
 .slider .box{
     position:relative;
-    width: 240px;
-    height: 300px;
+	background-color: transparent;
+    width: 340px;
+    height: 400px;
     transform-style: preserve-3d;
-    transform: perspective(1000px) rotateY(110deg);
-    transition: 1.5s;
+	transform: perspective(1000px) rotateY(0deg) translateY(70px);
+	transition: 1.5s;
 }
 .slider .box::before{
    content: '';
    position: absolute;
-   width: 240px;
-   height: 240px;
+   width: 340px;
+   height: 340px;
    background:#2225;
    z-index: 1000;
    transform: translateY(240px) rotateX(90deg) scale(1.1); 
@@ -2280,17 +2290,17 @@ a {
     top: 0;
     left: 0;
     width: 100%;
-    height: 300px;
+    height: 400px;
     background: linear-gradient(90deg, #ddd, #eee);
     transform-origin: center;
     transform-style: preserve-3d;
-    transform: rotateY(calc(var(--i) * 90deg)) translateZ(120px);
+    transform: rotateY(calc(var(--i) * 90deg)) translateZ(170px);
 }
 .slider .box .card .imgBx
 {
     position: relative;
     width: 100%;
-    height: 240px;
+    height: 340px;
 }
 .slider .box .card .imgBx img {
     position: absolute;
@@ -2319,20 +2329,20 @@ a {
 }
 .btns {
     position: absolute;
-    bottom: 80px;
+    bottom: 0px;
     display: flex;
     gap: 30px;
 }
-.btns div {
+/* .btns div {
     position: relative;
     width: 60px;
     height: 60px;
-    border: 2px solid #333;
+    border: 2px solid #777;
     border-radius: 50%;
     cursor: pointer;
 }
 .btns div:active{
-    background-color: #333;
+    background-color: #aaa;
 }
 .btns div::before{
     content: '';
@@ -2350,7 +2360,7 @@ a {
 {
     border-top: 3px solid #fff;
     border-right: 3px solid #fff;
-}
+} */
 
 /* Page Wrapper + Menu */
 
@@ -2984,11 +2994,18 @@ a {
 		}
 
 		.more.scrolly i {
-			left: -18px;
-			bottom: 0;
+			bottom: -5px;
 			position: absolute;
 			animation: levitate 2s infinite ease-in-out;
 		}
+
+		.scroll-content {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+		}
+		
 		
 		body.is-preload .more {
 			-moz-transform: translateY(8.5em);
