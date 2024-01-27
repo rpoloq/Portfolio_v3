@@ -2076,10 +2076,12 @@ a {
 				display: block;
 			}
 
-		#two .img-container {
-			width: 70%;
+		#two .slider {
+			width: 100%;
 			margin:7%;
-			border-radius: 100%;
+			display: flex;
+			justify-content: center;
+			/* border-radius: 100%; */
 			overflow: hidden;
 		}
 
@@ -2252,6 +2254,103 @@ a {
 			height: 100vh;
 			width: 100%;
 		}
+
+/* 3D Slider */
+
+.slider .box{
+    position:relative;
+    width: 240px;
+    height: 300px;
+    transform-style: preserve-3d;
+    transform: perspective(1000px) rotateY(110deg);
+    transition: 1.5s;
+}
+.slider .box::before{
+   content: '';
+   position: absolute;
+   width: 240px;
+   height: 240px;
+   background:#2225;
+   z-index: 1000;
+   transform: translateY(240px) rotateX(90deg) scale(1.1); 
+   filter: blur(40px);
+}
+.slider .box .card {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    background: linear-gradient(90deg, #ddd, #eee);
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transform: rotateY(calc(var(--i) * 90deg)) translateZ(120px);
+}
+.slider .box .card .imgBx
+{
+    position: relative;
+    width: 100%;
+    height: 240px;
+}
+.slider .box .card .imgBx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.slider .box .card h2{
+    position: relative;
+    top: 10px;
+    width: 240px;
+    text-align: center;
+    font-size: 1em;
+    font-weight: 500;
+    line-height: 1em;
+    text-transform: uppercase;
+    transform-style: preserve-3d;
+    transform: translateZ(30px);
+    backface-visibility: hidden;
+}
+.slider .box .card h2 span{
+    font-size: 0.75em;
+    color: #f44336;
+}
+.btns {
+    position: absolute;
+    bottom: 80px;
+    display: flex;
+    gap: 30px;
+}
+.btns div {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    border: 2px solid #333;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.btns div:active{
+    background-color: #333;
+}
+.btns div::before{
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-top: 3px solid #333;
+    border-right: 3px solid #333;
+    transform: rotate(45deg);
+}
+.btns div.prev::before{
+    transform: rotate(225deg);
+}
+.btns div:active::before
+{
+    border-top: 3px solid #fff;
+    border-right: 3px solid #fff;
+}
 
 /* Page Wrapper + Menu */
 
