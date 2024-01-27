@@ -15,13 +15,24 @@ body
 }
 .box{
     position:relative;
+    top:-60px;
     width: 240px;
     height: 300px;
     transform-style: preserve-3d;
     transform: perspective(1000px) rotateY(0deg);
     transition: 1.5s;
 }
-.bix .card {
+.box::before{
+   content: '';
+   position: absolute;
+   width: 240px;
+   height: 240px;
+   background:#222;
+   z-index: 1000;
+   transform: translateY(240px) rotateX(90deg) scale(1.1); 
+   filter: blur(40px);
+}
+.box .card {
     position: absolute;
     top: 0;
     left: 0;
@@ -45,4 +56,55 @@ body
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+.box .card h2{
+    position: relative;
+    top: 10px;
+    width: 240px;
+    text-align: center;
+    font-size: 1em;
+    font-weight: 500;
+    line-height: 1em;
+    text-transform: uppercase;
+    transform-style: preserve-3d;
+    transform: translateZ(30px);
+    backface-visibility: hidden;
+}
+.box .card h2 span{
+    font-size: 0.75em;
+    color: #f44336;
+}
+.btns {
+    position: absolute;
+    bottom: 80px;
+    display: flex;
+    gap: 30px;
+}
+.btns div {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    border: 2px solid #333;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.btns div:active{
+    background-color: #333;
+}
+.btns div::before{
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-top: 3px solid #333;
+    border-right: 3px solid #333;
+    transform: rotate(45deg) translate(-2.5px, 2.5px);
+}
+.btns div.prev::before{
+    transform: rotate(225deg) translate(-2.5px, 2.5px);
+}
+.btns div:active::before
+{
+    border-top: 3px solid #fff;
+    border-right: 3px solid #fff;
 }
