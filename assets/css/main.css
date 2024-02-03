@@ -2336,6 +2336,9 @@ a {
 
 /* Slider Info Container */
 
+#two .content.box.style2 {
+	min-height: 500px;
+}
 .content.box.style2 {
     transition: opacity 0.5s ease-in-out;
 }
