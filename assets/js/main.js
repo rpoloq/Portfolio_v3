@@ -20,6 +20,22 @@
 		}
 	}
 
+	/* Contact form submit */
+	document.getElementById('form').addEventListener('submit', function(event) {
+		event.preventDefault();
+
+		const formData = new FormData(event.target);
+
+		axios.post('https://formspree.io/f/xjvnvbql', formData)
+			.then(function(response) {
+				console.log(response.data);
+				alert('¡Formulario enviado con éxito!');
+			})
+			.catch(function(error) {
+				console.error('Error al enviar el formulario:', error);
+			});
+	});
+
 	// Breakpoints.
 		breakpoints({
 			xxlarge: [ '1681px',  '1920px' ],
