@@ -2333,34 +2333,16 @@ a {
     display: flex;
     gap: 30px;
 }
-/* .btns div {
-    position: relative;
-    width: 60px;
-    height: 60px;
-    border: 2px solid #777;
-    border-radius: 50%;
-    cursor: pointer;
+
+/* Slider Info Container */
+
+.content.box.style2 {
+    transition: opacity 0.5s ease-in-out;
 }
-.btns div:active{
-    background-color: #aaa;
+
+.content.box.style2.fade-out {
+    opacity: 0;
 }
-.btns div::before{
-    content: '';
-    position: absolute;
-    width: 15px;
-    height: 15px;
-    border-top: 3px solid #333;
-    border-right: 3px solid #333;
-    transform: rotate(45deg);
-}
-.btns div.prev::before{
-    transform: rotate(225deg);
-}
-.btns div:active::before
-{
-    border-top: 3px solid #fff;
-    border-right: 3px solid #fff;
-} */
 
 /* Page Wrapper + Menu */
 
