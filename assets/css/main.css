@@ -2272,14 +2272,14 @@ a {
     width: 340px;
     height: 400px;
     transform-style: preserve-3d;
-	transform: perspective(1000px) rotateY(0deg) translateY(70px);
+	transform: perspective(1000px) rotateY(0deg) translateY(100px);
 	transition: 1.5s;
 }
 .slider .box::before{
    content: '';
    position: absolute;
-   width: 340px;
-   height: 340px;
+   width: 280px;
+   height: 310px;
    background:#2225;
    z-index: 1000;
    transform: translateY(240px) rotateX(90deg) scale(1.1); 
