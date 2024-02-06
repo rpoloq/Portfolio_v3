@@ -9,90 +9,67 @@ const contentData = {
     2: {
         header: "Skills",
         content: `
-            <div class="mt-2 bold subtitle">Programming</div>
-            <div class="mt-2 pl-4 bold secondary">Proficient</div>
-            <div class="mt-2 pl-5">• C++, OpenGL, GLSL, C#, XR Interaction Toolkit, AR Foudnation, Java, Processing, Python, OpenCV, Primefaces, CSS, XHTML & HTML5.</div>
-            <div class="mt-2 pl-4 bold secondary">Experienced</div>
-            <div class="mt-2 pl-5">• Javascript, PHP, SQL, Three.js, OpenSceneGraph, Matlab/Octave.</div>
+            <div class="mt-2 textoNegrita subtitulo">Programming</div>
+            <div class="mt-2 pl-4 textoNegrita secundario">Proficient</div>
+            <div class="mt-2 pl-5">• C++, Python, OpenGL, XHTML y HTML5, CSS.</div>
+            <div class="mt-2 pl-4 textoNegrita secundario">Experienced</div>
+            <div class="mt-2 pl-5">• Java, Javascript, PHP, JSP, Matlab, SQL, Three.js, x3dom, d3.js, OpenSceneGraph, Scikit-learn.</div>
 
-            <div class="mt-2 bold subtitle">Software</div>
-            <div class="mt-2 pl-4 bold secondary">Proficient</div>
-            <div class="mt-2 pl-5">• Unity, Blender, Git, GitHub, GitLab & SVN.</div>
-            <div class="mt-2 pl-4 bold secondary">Experienced</div>
-            <div class="mt-2 pl-5">• Unreal, Houdini & 3D Max.</div>
+            <div class="mt-2 textoNegrita subtitulo">Software</div>
+            <div class="mt-2 pl-4 textoNegrita secundario">Proficient</div>
+            <div class="mt-2 pl-5">• Houdini, Visual Paradigm, Blender, GIMP, Premiere, Office.</div>
+            <div class="mt-2 pl-4 textoNegrita secundario">Experienced</div>
+            <div class="mt-2 pl-5">• ShotGrid, Nuke, Autodesk Maya, Inkscape, Scribus, After Effects, Audacity, Cubase.</div>
 
-            <div class="mt-2 bold subtitle">Lenguajes</div>
-            <div class="mt-2 pl-4 bold secondary">English</div>
-            <div class="mt-2 pl-5">• Native.</div>
-            <div class="mt-2 pl-4 bold secondary">English</div>
-            <div class="mt-2 pl-5">•Conversational (B2).</div>
-
-            <div class="mt-2 bold subtitle">Others</div>
-            <div class="mt-2 pl-4">• Computational and proyective geometry, linear algebra, trigonometry, numerical integration.</div>
-            <div class="mt-2 pl-4">• Knowledge of 3D graphics, animation and simulation.</div>
-            <div class="mt-2 pl-4">• Bases of machine learning.</div>
-            <div class="mt-2 pl-4">• Software engineering patterns, principles and methodologies.</div>
-            <div class="mt-2 pl-4">• Software testing.</div>
+            <div class="mt-2 textoNegrita subtitulo">Others</div>
+            <div class="mt-2 pl-4">• ICT and mathematical knowledge.</div>
+            <div class="mt-2 pl-4">• Knowledge of 3D techniques, animation and simulation.</div>
+            <div class="mt-2 pl-4">• Bases of machine learning and data mining.</div>
+            <div class="mt-2 pl-4">• Software engineering patterns and methodologies.</div>
             <div class="mt-2 pl-4">• Knowledge of audio systems.</div>
-            <div class="mt-2 pl-4">• Parallel programming and operating systems.</div>
+            <div class="mt-2 pl-4">• Networks and operating systems.</div>
             <div class="mt-2 pl-4">• Projects management.</div>
+            <div class="mt-2 pl-4">• Communication theory, digital marketing.</div>
+            <div class="mt-2 pl-4">• Design and creation of multimedia content.</div>
             <div class="mt-2 pl-4">• Ease in finding solutions to new problems.</div>
+            <div class="mt-2 pl-4">• Native Spanish, high comprehension of English and Catalan / Valencian.</div>
         `
     },
     3: {
-        header: "Educación",
+        header: "Education",
         content: `
-        <div class="mt-2 english">• Pursuing: <span class="bold">Master's in Computer Graphics, Simulation & VR</span> |<span class="secondary"> U-TAD</span></div>
-        <div class="mt-2 spansih">• Cursando: <span class="bold">Máster en  Computación Gráfica, Simulación & RV</span> |<span class="secondary"> U-TAD</span></div>
-        <div class="mt-2 english">• Graduated in <span class="bold">Multimedia Engineering</span> ( 2017-2021, Average grade: 8,1) |<span class="secondary"> Escola Tècnica Superior d'Enginyeria - Universidad de Valencia</span></div>
-        <div class="mt-2 spanish">• Graduado en <span class="bold">Ingeniería Multimedia</span> ( 2017-2021, Average grade: 8,1) |<span class="secondary"> Escola Tècnica Superior d'Enginyeria - Universidad de Valencia</span></div>
-        <div class="mt-2">• Technological high school diploma | <span class="secondary">I.E.S. Escultor José Luis Sánchez (2015-2017, Average grade: 9)</span></div>
-        <div class="mt-2">• Bachillerato tecnológico |<span class="secondary"> I.E.S. Escultor José Luis Sánchez (2015-2017, Nota media: 9)</span></div>
+            <div class="mt-2">• Graduated: <span class="textoNegrita">Master in VFX and composition with Houdini and Nuke</span> |<span class="secundario"> Animum Creativity Advanced School</span></div>
+            <div class="mt-2">• Graduated in <span class="textoNegrita">Multimedia Engineering</span> ( 2017-2021, Average grade: 8,34) |<span class="secundario"> Escola Tècnica Superior d'Enginyeria - Universidad de Valencia</span></div>
+            <div class="mt-2">• Bachillerato tecnológico |<span class="secundario"> I.E.S. Pirámide</span></div>
         `
     },
     4: {
         header: "Experience",
         content: `
-            <div class="mt-2">DESIGN AND TECHNICAL INNOVATION SL (02/2021-05/2021)</div>
-            <div class="mt-2">Company where I did the curricular internship of the degree at the university.</div>
-            <div class="mt-2 bold">Position:</div>
-            <div class="mt-2 pl-4">• Internship Junior Programmer.</div>
-            <div class="mt-2 bold">Tasks:</div>
-            <div class="mt-2 pl-4">• Development of web applications, taking care of both the Frontend and the Backend, including a responsive version for mobile.</div>
-            <div class="mt-2 pl-4">• React course carried out during the working period.</div>
-            <div class="mt-2 pl-4">• I work with the use of plugins for Frontend.</div>
-            <div class="mt-2 bold">Main technologies:</div>
-            <div class="mt-2 pl-4">• Javascript, CSS3.</div>
-            <div class="mt-2 pl-4">• PHP, with the use of the framework Codeigniter.</div>
-            <div class="mt-2 pl-4">• HTML5.</div>
-            <div class="mt-2">LÃBERIT (09/2021-Today)</div>
-            <div class="mt-2">Company where I currently work as a programmer.</div>
-            <div class="mt-2 bold">Position:</div>
-            <div class="mt-2 pl-4">• Junior programmer.</div>
-            <div class="mt-2 bold">Tasks:</div>
-            <div class="mt-2 pl-4">• Development and maintenance of web applications for the Murcian Health System (SMS).</div>
-            <div class="mt-2 bold">Work methodology:</div>
-            <div class="mt-2 pl-4">• Agile.</div>
-            <div class="mt-2 bold">Technology:</div>
-            <div class="mt-2 pl-4">• Backend: Java (Spring), Hibernate with JPA and SQL.</div>
-            <div class="mt-2 pl-4">• Frontend: JSF with the framework Primefaces.</div>
-            <div class="mt-2 pl-4">• Unit tests with JUnit6.</div>
-            <div class="mt-2 pl-4">• Platforms: Jenkins, Jira, Trello.</div>
-            <div class="mt-2 pl-4">• Version Control: Git (and Gitlab) and SVN.</div>
+            <div class="mt-2 subtitulo"><span class="textoNegrita">Junior Pipeline &amp; Tools Developer </span> <span class="secundario">| November 2022 - March 2023</span></div>
+            <div class="mt-2 pl-4">• Full-time development at <a href="https://www.linkedin.com/company/el-guiri-studios/mycompany/" target="_blank">El Guiri Studios</a>.
+            Development of the integration of Photoshop and Blender within the Pipeline. Development of production tools and Blender tools with PySide. Support in the implementation of the Task Manager tool and use of Aquarium (Production Management, similar to Shotgrid).</div>
+            <div class="mt-2 subtitulo"><span class="textoNegrita">Tools programmer / Pipeline </span> <span class="secundario">| June 2022 - November 2022</span></div>
+            <div class="mt-2 pl-4">• Part-time development at <a href="https://lbox.es/" target="_blank">Lightbox Animation Studios</a>.
+            Development of pipeline tools and TD. Django web development in Linux. PyQt, Nuke, Blender, Natron, Maya.</div>
+            <div class="mt-2 subtitulo"><span class="textoNegrita">Tools programmer </span> <span class="secundario">| October 2020 - January 2021</span></div>
+            <div class="mt-2 pl-4">• Internship in the pipeline department of the <span class="textoNegrita">animation studio</span> <a href="https://hampastudio.com/" target="_blank">Hampa Studio S.L.</a>
+            Development of tools and resolution of tasks related to the position of Technical Director within the Pipeline using specific software, including Shotgun Software.</div>
+            <div class="mt-2 textoNegrita subtitulo">Graphic design</div>
+            <div class="mt-2 pl-4">• <a href="https://rafaelpolope.github.io/LaTortilleria_Site/" target="_blank">Corporate website for the company La Tortillería</a>. Custom web design with WordPress for a graphic design company, including online store development.</div>
         `
     },
     5: {
-        header: "Proyectos",
+        header: "Projects",
         content: `
-            <div class="mt-2 subtitle">Proyectos Personales</div>
-            <div class="mt-2 pl-4">• Desarrollado varios <span class="bold">proyectos personales</span> relacionados con modelado 3D, animación y desarrollo de juegos, mostrando habilidades en software como Blender, Unity y Unreal Engine.</div>
-            <div class="mt-2 subtitle">Contribuciones de Código Abierto</div>
-            <div class="mt-2 pl-4">• Contribuí a proyectos de código abierto en los campos de gráficos por computadora y realidad virtual, incluyendo proyectos alojados en GitHub.</div>
-            <div class="mt-2 subtitle">Proyectos de Prácticas</div>
-            <div class="mt-2 pl-4">• Trabajé en <span class="bold">proyectos de prácticas</span> durante mi tiempo en varias empresas, incluyendo proyectos que involucraban experiencias de realidad virtual, desarrollo web e ingeniería de software.</div>
+            <div class="mt-2 subtitulo">Personal Projects</div>
+            <div class="mt-2 pl-4">• Developed various <span class="textoNegrita">personal projects</span> related to 3D modeling, animation, and game development, showcasing skills in software like Blender, Unity, and Unreal Engine.</div>
+            <div class="mt-2 subtitulo">Open Source Contributions</div>
+            <div class="mt-2 pl-4">• Contributed to open-source projects in the fields of computer graphics and virtual reality, including projects hosted on GitHub.</div>
+            <div class="mt-2 subtitulo">Internship Projects</div>
+            <div class="mt-2 pl-4">• Worked on <span class="textoNegrita">internship projects</span> during my time at various companies, including projects involving VR experiences, web development, and software engineering.</div>
         `
     }
-    
 };
 
 
@@ -112,7 +89,7 @@ function changeContent(data) {
         contentDiv.innerHTML = data.content;
 
         contentBox.classList.remove('fade-out');
-    }, 500); 
+    }, 500);
 }
 
 
@@ -126,13 +103,11 @@ let degree = 0;
 prev.addEventListener('click', function(){
     degree += 90;
     box.style = `transform: perspective(1000px) rotateY(${degree}deg) translateY(100px) !important`;
-    // Cambiar el contenido del div content box según la cara visible
     changeContent(contentData[Math.abs(Math.floor(degree / 90)) % 4 + 1]);
 });
 
 next.addEventListener('click', function(){
     degree -= 90;
     box.style = `transform: perspective(1000px) rotateY(${degree}deg) translateY(100px) !important`;
-    // Cambiar el contenido del div content box según la cara visible
     changeContent(contentData[Math.abs(Math.floor(degree / 90)) % 4 + 1]);
 });
