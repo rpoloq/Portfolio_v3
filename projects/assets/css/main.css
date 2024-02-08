@@ -3328,8 +3328,14 @@ input, select, textarea {
 	height: 450px;
 	width: auto;
 }
-iframe.project-view {
+/* iframe.project-view {
     width: 100%;
+    margin: auto;
+    display: block;
+} */
+iframe.project-view {
+    min-width: 799px !important;
+    min-height: 450px !important;
     margin: auto;
     display: block;
 }
