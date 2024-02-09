@@ -2333,41 +2333,76 @@ a {
     display: flex;
     gap: 30px;
 }
-.bold{
-    font-weight: bold;
-}
-.subtitle{
-    font-size: 30px;
-    text-align: center;
-    /* color: #25274d; */
-    margin-bottom: 50px;
-}
-.secondary{
-    color: dimgrey;
-}
-.mt-2 {
-	margin-top: 2px;
-}
-.pl-4 {
-	padding-left: 4px;
-}
-.pl-5 {
-	padding-left: 5px;
-}
-
 
 /* Slider Info Container */
-
-#two .content.box.style2 {
-	min-height: 500px;
-}
 .content.box.style2 {
+	align-self: center;
+    min-height: 600px;
+    max-width: 500px; /* Ajustar según sea necesario */
+    margin: auto; /* Centrar el contenido */
+    padding: 20px 10px 10px 30px;
+    background-color: #f9f9f9; /* Color de fondo */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra */
+    transition: opacity 0.5s ease-in-out;
+}
+.fade-out {
+    opacity: 0;
     transition: opacity 0.5s ease-in-out;
 }
 
-.content.box.style2.fade-out {
-    opacity: 0;
+.bold {
+    font-weight: bold;
 }
+
+.subtitle {
+    font-size: 24px; /* Reducir tamaño del título */
+    text-align: center;
+    margin-bottom: 20px; /* Reducir espacio inferior */
+}
+
+.secondary {
+    color: dimgrey;
+}
+
+.mt-2 {
+    margin-top: 10px; /* Ajustar espaciado vertical */
+}
+
+.pl-4,
+.pl-5 {
+    padding-left: 20px; /* Ajustar espacio izquierdo */
+}
+
+.post {
+	overflow-x: hidden;
+	white-space: nowrap;
+}
+
+.section {
+	display: inline-block;
+	width: 100%;
+}
+
+.pagination {
+	text-align: center;
+}
+
+.dot {
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	background-color: #ccc;
+	border-radius: 50%;
+	margin: 0 5px;
+	cursor: pointer;
+}
+
+.active {
+	background-color: #333;
+}
+  
+
 
 /* Page Wrapper + Menu */
 
