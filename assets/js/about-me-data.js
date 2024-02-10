@@ -1,116 +1,220 @@
 const contentData = {
-    1: {
-        header: "Who I Am",
-        content: `
-            <p>I'm Rafael Polope, graduated in Multimedia Engineering at the University of Valencia and currently pursuing my Master's Degree in Computer Graphics, Simulation and Virtual Reality at U-TAD in Madrid.</p>
-            <p>Passionate about computer graphics and technology, I have a strong background in both theoretical knowledge and practical skills, aiming to apply my expertise in creative and innovative projects.</p>
-        `
+    spanish: {
+        1: {
+            header: "Quien soy",
+            content: `
+                <p>I'm Rafael Polope, graduated in Multimedia Engineering at the University of Valencia and currently pursuing my Master's Degree in Computer Graphics, Simulation and Virtual Reality at U-TAD in Madrid.</p>
+                <p>Passionate about computer graphics and technology, I have a strong background in both theoretical knowledge and practical skills, aiming to apply my expertise in creative and innovative projects.</p>
+            `
+        },
+        2: {
+            header: "Habilidades",
+            content: `
+                <div id="skills">
+                    <div class="section" id="programmingSkills">
+                        <div class="mt-2 bold subtitle">Lenguajes de Programación</div>
+                        <div class="mt-2 pl-4 bold secondary">Avanzado</div>
+                        <div class="mt-2 pl-5">• C++, C#, Java, Python, OpenGL, GLSL, XHTML y HTML5, Primefaces, CSS.</div>
+                        <div class="mt-2 pl-4 bold secondary">Intermedio</div>
+                        <div class="mt-2 pl-5">• Javascript, Three.js, WebGL, PHP, JSP, Matlab, SQL, Hibernate, JPA.</div>
+                        <div class="mt-2 pl-4 bold secondary">Básico</div>
+                        <div class="mt-2 pl-5">• x3dom, d3.js, OpenSceneGraph.</div>
+                    </div>
+    
+                    <div class="section" id="software" style="display: none">
+                        <div class="mt-2 bold subtitle">Software</div>
+                        <div class="mt-2 pl-4 bold secondary">Avanzado</div>
+                        <div class="mt-2 pl-5">• Blender, Unity, Processing, Visual Paradigm.</div>
+                        <div class="mt-2 pl-4 bold secondary">Intermedio</div>
+                        <div class="mt-2 pl-5">• Unreal, XR Interaction Toolkit, AR Foundation, Vuforia.</div>
+                        <div class="mt-2 pl-4 bold secondary">Básico</div>
+                        <div class="mt-2 pl-5">• Houdini, 3DMax.</div>
+                    </div>
+    
+                    <div class="section" id="lenguages" style="display: none">
+                        <div class="mt-2 bold subtitle">Idiomas</div>
+                        <div class="mt-2 pl-4 bold">• Español | <span class="secondary">Nativo</span></div>
+                        <div class="mt-2 pl-4 bold">• Inglés  | <span class="secondary">Intermedio</span></div>
+                    </div>
+    
+                    <div class="section" id="mates" style="display: none">
+                        <div class="mt-2 bold subtitle">Conocimientos matemáticos</div>
+                        <div class="mt-2 pl-4">• Álgebra lineal y vectorial.</div>
+                        <div class="mt-2 pl-4">• Geometría proyetiva y computacional.</div>
+                        <div class="mt-2 pl-4">• Geometría diferencial.</div>
+                        <div class="mt-2 pl-4">• Integración numérica.</div>
+                        <div class="mt-2 pl-4">• Probabilidad y estadística.</div>
+                        <div class="mt-2 pl-4">• Análisis de implementación de algoritmos de árboles y grafos.</div>
+                        <div class="mt-2 pl-4">• Análisis de costes de algoritmos.</div>
+                        <div class="mt-2 pl-4">• Estudio de algoritmos de compresión como el JPEG.</div>
+                    </div>
+    
+                    <div class="section" id="otherSkills" style="display: none">
+                        <div class="mt-2 bold subtitle">Otras habilidades</div>
+                        <div class="mt-2 pl-4">• Conocimientos de técnicas 3D, animación y simulación.</div>
+                        <div class="mt-2 pl-4">• Fundamentos de IA y aprendizaje automático.</div>
+                        <div class="mt-2 pl-4">• Patrones y metodologías de ingeniería de software.</div>
+                        <div class="mt-2 pl-4">• Conocimientos de sistemas de audio.</div>
+                        <div class="mt-2 pl-4">• Redes y sistemas operativos.</div>
+                        <div class="mt-2 pl-4">• Gestión de proyectos.</div>
+                        <div class="mt-2 pl-4">• Diseño y creación de contenido multimedia.</div>
+                        <div class="mt-2 pl-4">• Facilidad para encontrar soluciones a nuevos problemas.</div>
+                    </div>
+                </div>    
+                <div class="pagination">
+                    <span class="dot active" data-section="programmingSkills" onclick="showSection('programmingSkills')"></span>
+                    <span class="dot" data-section="software" onclick="showSection('software')"></span>
+                    <span class="dot" data-section="lenguages" onclick="showSection('lenguages')"></span>
+                    <span class="dot" data-section="mates" onclick="showSection('mates')"></span>
+                    <span class="dot" data-section="otherSkills" onclick="showSection('otherSkills')"></span>
+                    <!-- Agrega más puntos según la cantidad de secciones en la publicación -->
+                </div>    
+            `
+        },
+        3: {
+            header: "Educación",
+            content: `
+                <div class="mt-2">• Cursando: <span class="bold">Máster en Computación Gráfica, Simulación & RV</span> |<span class="secondary"> U-TAD</span></div>
+                <div class="mt-2">• Graduado en <span class="bold">Ingeniería Multimedia</span> (2017-2021, <strong class="secondary">Nota media: 8.1</strong>) | Universidad de Valencia</div>
+                <div class="mt-2">• Bachillerato tecnológico | I.E.S. Escultor José Luis Sánchez (2015-2017, <strong class="secondary">Nota media: 9</strong>)</div>
+            `
+        },
+        4: {
+            header: "Experiencia",
+            content: `
+                <div class="mt-2">•<span class="bold">Prácticas de Programador Web Junior (02/2021-05/2021)<span class="bold"> |<span class="secondary"> Diseño e Innovación, S.L </span></div>
+                <div class="pl-4">- Desarrollo de aplicaciones web, tanto Frontend como Backend, incluyendo una versión responsive para móviles.</div>
+                <div class="mt-2">•<span class="bold">Programador (09/2021-Presente)<span class="bold">|<span class="secondary"> LÃBERIT</div>
+                <div class="pl-4">- Desarrollo y mantenimiento de aplicaciones web para el Sistema de Salud Murciano (SMS).</div>
+            `
+        },
+        5: {
+            header: "Cursos",
+            content: `
+                <div class="mt-2">•<span class="bold">SCRUM DEVELOPER PROFFESIONAL CERTIFICATE (SDPC)</span> |<span class="secondary"> CERTIPROF</span></div>
+                <div class="mt-2">•<span class="bold">INTELIGENCIA ARTIFICIAL APLICADA A LA EMPRESA</span> |<span class="secondary"> EDUCATIC GAP PUE S.L.</span></div>        `
+        },
+        6: {
+            header: "Proyectos",
+            content: `
+                <div class="mt-2">• <span class="bold">Proyectos personales:<span class="bold"></div>
+                <div class="pl-4">- Desarrollo de varios proyectos personales relacionados con modelado 3D, animación y desarrollo de juegos.</div>
+                <div class="pl-4">- Este portfolio.</div>
+                <div class="mt-2">• <span class="bold">Proyectos en prácticas:<span class="bold"></div>
+                <div class="pl-4">- Desarrollo de apliación web desde cero ocupándome de las tareas tanto de front-end como de back-end usando diversos plug-ins y framworks, tales como: bootstrap, JQuery o Codeigniter para manejo de BBDD.</div>
+                <div class="pl-4">- Desarrollo de apliación en unity con control de modelos en tiempo real mediante gizmos y de cámara para prevención de riesgos laborales.</div>
+            `
+        }
     },
-    // 2: {
-    //     header: "Habilidades",
-    //     content: `
-    //         <ul class="skills-list">
-    //             <li><span class="bold">Programas 3D:</span> Blender, Unity, Unreal, Houidni, 3DMax, Processing</li>
-    //             <li><span class="bold">lenguajes de programación:</span> Java, Python, C, C++, C#, JavaScript, CSS, HTML5, PHP, SQL</li>
-    //             <li><span class="bold">Librerías Gráficas:</span> OpenGL (GLSL), WebGL</li>
-    //             <li><span class="bold">Frameworks:</span> Bootstrap, Codeigniter, React, Primefaces, Hibernate, Spring, JPA</li>
-    //             <li><span class="bold">Metodologías de desarrollo:</span> Scrum</li>
-    //             <li><span class="bold">Control de versiones:</span> Git, SVN</li>
-    //             <li><span class="bold">Patrones de diseño:</span> MVC, Pooling, Delegación, Singleton, Factory, etc. </li>
-    //             <li><span class="bold">Otras habilidades</span></li>
-    //             <ul class="skills-list">
-    //                 <li>Fuertes conocimeintos de OOP</li>
-    //                 <li>TDD</li>
-    //                 <li>Graphic Pipeline and Graphic Engines</li>
-    //                 <li>Ease in finding solutions to new problems<li>
-    //             </ul>
-    //         </ul>
-    //     `
-    // },
-    2: {
-        header: "Skills",
-        content: `
-            <div class="post">
-                <div class="section" id="programmingSkills">
-                    <div class="mt-2 pl-4 textoNegrita secundario">Proficient</div>
-                    <div class="mt-2 pl-5">• C++, Python, OpenGL, XHTML y HTML5, CSS.</div>
-                    <div class="mt-2 pl-4 textoNegrita secundario">Experienced</div>
-                    <div class="mt-2 pl-5">• Java, Javascript, PHP, JSP, Matlab, SQL, Three.js, x3dom, d3.js, OpenSceneGraph, Scikit-learn.</div>
-                </div>
-
-                <div class="section" id="software">
-                    <div class="mt-2 textoNegrita subtitulo">Software</div>
-                    <div class="mt-2 pl-4 textoNegrita secundario">Proficient</div>
-                    <div class="mt-2 pl-5">• Houdini, Visual Paradigm, Blender, GIMP, Premiere, Office.</div>
-                    <div class="mt-2 pl-4 textoNegrita secundario">Experienced</div>
-                    <div class="mt-2 pl-5">• ShotGrid, Nuke, Autodesk Maya, Inkscape, Scribus, After Effects, Audacity, Cubase.</div>
-                </div>
-
-                <div class="section" id="otherSkills">
-                    <div class="mt-2 textoNegrita subtitulo">Other Skills</div>
-                    <div class="mt-2 pl-4">• ICT and mathematical knowledge.</div>
-                    <div class="mt-2 pl-4">• Knowledge of 3D techniques, animation and simulation.</div>
-                    <div class="mt-2 pl-4">• Bases of machine learning and data mining.</div>
-                    <div class="mt-2 pl-4">• Software engineering patterns and methodologies.</div>
-                    <div class="mt-2 pl-4">• Knowledge of audio systems.</div>
-                    <div class="mt-2 pl-4">• Networks and operating systems.</div>
-                    <div class="mt-2 pl-4">• Projects management.</div>
-                    <div class="mt-2 pl-4">• Communication theory, digital marketing.</div>
-                    <div class="mt-2 pl-4">• Design and creation of multimedia content.</div>
-                    <div class="mt-2 pl-4">• Ease in finding solutions to new problems.</div>
-                    <div class="mt-2 pl-4">• Native Spanish, high comprehension of English and Catalan / Valencian.</div>
-                </div>
-            </div>
-
-            <div class="pagination">
-                <span class="dot" data-section="programmingSkills" onclick="showSection('programmingSkills')"></span>
-                <span class="dot" data-section="software" onclick="showSection('software')"></span>
-                <span class="dot" data-section="otherSkills" onclick="showSection('otherSkills')"></span>
-                <!-- Agrega más puntos según la cantidad de secciones en la publicación -->
-            </div>
-        
-        `
-    },
-    3: {
-        header: "Educación",
-        content: `
-            <div class="mt-2">• Cursando: <span class="bold">Máster en Computación Gráfica, Simulación & RV</span> |<span class="secondary"> U-TAD</span></div>
-            <div class="mt-2">• Graduado en <span class="bold">Ingeniería Multimedia</span> (2017-2021, Nota media: 8.1) |<span class="secondary"> Universidad de Valencia</span></div>
-            <div class="mt-2">• Bachillerato tecnológico |<span class="secondary"> I.E.S. Escultor José Luis Sánchez (2015-2017, Nota media: 9)</span></div>
-        `
-    },
-    4: {
-        header: "Cursos",
-        content: `
-            <div class="mt-2">•<span class="bold">Scrum Developer Professional Certificate (SDPC)</span> |<span class="secondary"> CertiProf</span></div>
-            <div class="mt-2">•<span class="bold">INTELIGENCIA ARTIFICIAL APLICADA A LA EMPRESA</span> |<span class="secondary"> EDUCATIC GAP PUE S.L.</span></div>        `
-    },
-    5: {
-        header: "Idiomas",
-        content: `
-            <div class="mt-2">•<span class="bold">Español</span> |<span class="secondary"> Nativo </span></div>
-            <div class="mt-2">•<span class="bold">Inglés</span> |<span class="secondary"> Conversacional</span></div>        `
-    },
-    6: {
-        header: "Experiencia",
-        content: `
-            <div class="mt-2">• Prácticas de Programador Web Junior (02/2021-05/2021)|<span class="secondary"> Diseño e Innovación, S.L </span></div>
-            <div class="pl-4">- Desarrollo de aplicaciones web, tanto Frontend como Backend, incluyendo una versión responsive para móviles.</div>
-            <div class="mt-2">• Programmer (09/2021-Presente)|<span class="secondary"> LÃBERIT</div>
-            <div class="pl-4">- Desarrollo y mantenimiento de aplicaciones web para el Sistema de Salud Murciano (SMS).</div>
-        `
-    },
-    7: {
-        header: "Proyectos",
-        content: `
-            <div class="mt-2">• Proyectos personales:</div>
-            <div class="pl-4">- Desarrollo de varios proyectos personales relacionados con modelado 3D, animación y desarrollo de juegos.</div>
-            <div class="pl-4">- Este portfolio.</div>
-            <div class="mt-2">• Proyectos en prácticas:</div>
-            <div class="pl-4">- Desarrollo de apliación web desde cero ocupándome de las tareas tanto de front-end como de back-end usando diversos plug-ins y framworks, tales como: bootstrap, JQuery o Codeigniter para manejo de BBDD.</div>
-            <div class="pl-4">- Desarrollo de apliación en unity con control de modelos en tiempo real mediante gizmos y de cámara para prevención de riesgos laborales.</div>
-        `
+    english:
+    {
+        1: {
+            header: "Who I Am",
+            content: `
+                <p>I'm Rafael Polope, graduated in Multimedia Engineering at the University of Valencia and currently pursuing my Master's Degree in Computer Graphics, Simulation and Virtual Reality at U-TAD in Madrid.</p>
+                <p>Passionate about computer graphics and technology, I have a strong background in both theoretical knowledge and practical skills, aiming to apply my expertise in creative and innovative projects.</p>
+            `
+        },
+        2: {
+            header: "Skills",
+            content: `
+                <div id="skills">
+                    <div class="section" id="programmingSkills">
+                        <div class="mt-2 bold subtitle">Programming Languages</div>
+                        <div class="mt-2 pl-4 bold secondary">Advanced</div>
+                        <div class="mt-2 pl-5">• C++, C#, Java, Python, OpenGL, GLSL, XHTML and HTML5, Primefaces, CSS.</div>
+                        <div class="mt-2 pl-4 bold secondary">Intermediate</div>
+                        <div class="mt-2 pl-5">• Javascript, Three.js, WebGL, PHP, JSP, Matlab, SQL, Hibernate, JPA.</div>
+                        <div class="mt-2 pl-4 bold secondary">Basic</div>
+                        <div class="mt-2 pl-5">• x3dom, d3.js, OpenSceneGraph.</div>
+                    </div>
+    
+                    <div class="section" id="software" style="display: none">
+                        <div class="mt-2 bold subtitle">Software</div>
+                        <div class="mt-2 pl-4 bold secondary">Advanced</div>
+                        <div class="mt-2 pl-5">• Blender, Unity, Processing, Visual Paradigm.</div>
+                        <div class="mt-2 pl-4 bold secondary">Intermediate</div>
+                        <div class="mt-2 pl-5">• Unreal, XR Interaction Toolkit, AR Foundation, Vuforia.</div>
+                        <div class="mt-2 pl-4 bold secondary">Basic</div>
+                        <div class="mt-2 pl-5">• Houdini, 3DMax.</div>
+                    </div>
+    
+                    <div class="section" id="languages" style="display: none">
+                        <div class="mt-2 bold subtitle">Languages</div>
+                        <div class="mt-2 pl-4 bold">• Spanish | <span class="secondary">Native</span></div>
+                        <div class="mt-2 pl-4 bold">• English  | <span class="secondary">Intermediate</span></div>
+                    </div>
+    
+                    <div class="section" id="math" style="display: none">
+                        <div class="mt-2 bold subtitle">Mathematical Knowledge</div>
+                        <div class="mt-2 pl-4">• Linear and vector algebra.</div>
+                        <div class="mt-2 pl-4">• Projective and computational geometry.</div>
+                        <div class="mt-2 pl-4">• Differential geometry.</div>
+                        <div class="mt-2 pl-4">• Numerical integration.</div>
+                        <div class="mt-2 pl-4">• Probability and statistics.</div>
+                        <div class="mt-2 pl-4">• Analysis of implementation of tree and graph algorithms.</div>
+                        <div class="mt-2 pl-4">• Analysis of algorithm costs.</div>
+                        <div class="mt-2 pl-4">• Study of compression algorithms like JPEG.</div>
+                    </div>
+    
+                    <div class="section" id="otherSkills" style="display: none">
+                        <div class="mt-2 bold subtitle">Other Skills</div>
+                        <div class="mt-2 pl-4">• Knowledge of 3D techniques, animation and simulation.</div>
+                        <div class="mt-2 pl-4">• Basics of AI and machine learning.</div>
+                        <div class="mt-2 pl-4">• Software engineering patterns and methodologies.</div>
+                        <div class="mt-2 pl-4">• Knowledge of audio systems.</div>
+                        <div class="mt-2 pl-4">• Networks and operating systems.</div>
+                        <div class="mt-2 pl-4">• Project management.</div>
+                        <div class="mt-2 pl-4">• Design and creation of multimedia content.</div>
+                        <div class="mt-2 pl-4">• Ease in finding solutions to new problems.</div>
+                    </div>
+                </div>    
+                <div class="pagination">
+                    <span class="dot active" data-section="programmingSkills" onclick="showSection('programmingSkills')"></span>
+                    <span class="dot" data-section="software" onclick="showSection('software')"></span>
+                    <span class="dot" data-section="languages" onclick="showSection('languages')"></span>
+                    <span class="dot" data-section="math" onclick="showSection('math')"></span>
+                    <span class="dot" data-section="otherSkills" onclick="showSection('otherSkills')"></span>
+                    <!-- Add more points according to the number of sections in the publication -->
+                </div>    
+            `
+        },
+        3: {
+            header: "Education",
+            content: `
+                <div class="mt-2">• Currently studying: <span class="bold">Master's in Computer Graphics, Simulation & VR</span> |<span class="secondary"> U-TAD</span></div>
+                <div class="mt-2">• Graduated in <span class="bold">Multimedia Engineering</span> (2017-2021, <strong class="secondary">Average grade: 8.1</strong>) | University of Valencia</div>
+                <div class="mt-2">• Technological high school | I.E.S. Escultor José Luis Sánchez (2015-2017, <strong class="secondary">Average grade: 9</strong>)</div>
+            `
+        },
+        4: {
+            header: "Experience",
+            content: `
+                <div class="mt-2">•<span class="bold">Junior Web Programmer Internship (02/2021-05/2021)<span class="bold"> |<span class="secondary"> Design and Innovation, S.L </span></div>
+                <div class="pl-4">- Development of web applications, both Frontend and Backend, including a responsive version for mobile.</div>
+                <div class="mt-2">•<span class="bold">Programmer (09/2021-Present)<span class="bold">|<span class="secondary"> LÃBERIT</div>
+                <div class="pl-4">- Development and maintenance of web applications for the Murcian Health System (SMS).</div>
+            `
+        },
+        5: {
+            header: "Courses",
+            content: `
+                <div class="mt-2">•<span class="bold">SCRUM DEVELOPER PROFESSIONAL CERTIFICATE (SDPC)</span> |<span class="secondary"> CERTIPROF</span></div>
+                <div class="mt-2">•<span class="bold">APPLIED ARTIFICIAL INTELLIGENCE TO THE COMPANY</span> |<span class="secondary"> EDUCATIC GAP PUE S.L.</span></div>        `
+        },
+        6: {
+            header: "Projects",
+            content: `
+                <div class="mt-2">• <span class="bold">Personal Projects:<span class="bold"></div>
+                <div class="pl-4">- Development of several personal projects related to 3D modeling, animation, and game development.</div>
+                <div class="pl-4">- This portfolio.</div>
+                <div class="mt-2">• <span class="bold">Internship Projects:<span class="bold"></div>
+                <div class="pl-4">- Development of a web application from scratch, handling both front-end and back-end tasks using various plugins and frameworks such as: bootstrap, JQuery, or Codeigniter for database management.</div>
+                <div class="pl-4">- Development of an application in Unity with real-time model control using gizmos and camera for occupational risk prevention.</div>
+            `
+        }
     }
+    
 };
 
 // Show the section of Skills info
@@ -165,11 +269,12 @@ prev.addEventListener('click', function(){
     degree += 90;
     rotationIndex ++;
     box.style = `transform: perspective(1000px) rotateY(${degree}deg) translateY(100px) !important`;
-    changeContent(contentData[Math.abs(rotationIndex) % 7 + 1]);
+    changeContent(contentData['spanish'][Math.abs(rotationIndex) % 6 + 1]);
 });
 
 next.addEventListener('click', function(){
     degree -= 90;
+    rotationIndex --;
     box.style = `transform: perspective(1000px) rotateY(${degree}deg) translateY(100px) !important`;
-    changeContent(contentData[Math.abs(rotationIndex) % 7 + 1]);
+    changeContent(contentData['spanish'][Math.abs(rotationIndex) % 6 + 1]);
 });
