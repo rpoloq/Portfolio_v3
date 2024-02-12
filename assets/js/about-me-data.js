@@ -3,9 +3,8 @@ const contentData = {
         1: {
             header: "Quien soy",
             content: `
-                <p>I'm Rafael Polope, graduated in Multimedia Engineering at the University of Valencia and currently pursuing my Master's Degree in Computer Graphics, Simulation and Virtual Reality at U-TAD in Madrid.</p>
-                <p>Passionate about computer graphics and technology, I have a strong background in both theoretical knowledge and practical skills, aiming to apply my expertise in creative and innovative projects.</p>
-            `
+            <p>Soy Rafael Polope, graduado en Ingeniería Multimedia en la Universidad de Valencia y actualmente cursando mi Master en Gráficos por Computadora, Simulación y Realidad Virtual en U-TAD en Madrid.</p>
+            <p>Apasionado por los gráficos por computadora y la tecnología, tengo una sólida formación tanto en conocimientos teóricos como en habilidades prácticas, con el objetivo de aplicar mi experiencia en proyectos creativos e innovadores.</p>`
         },
         2: {
             header: "Habilidades",
@@ -237,7 +236,6 @@ function showSection(sectionId) {
 }
   
 
-
 // Change the content of Info panel of the 3D Slider
 function changeContent(data) {
     const contentBox = document.querySelector('#two .content.box.style2');
@@ -251,12 +249,16 @@ function changeContent(data) {
 
         const contentDiv = contentBox.querySelector('div');
         contentDiv.innerHTML = data.content;
+        if (data.header === "Habilidades" || data.header === "Skills")
+        {
+            contentDiv.classList.add("skills-container");
+        }else{
+            contentDiv.classList.remove("skills-container");
+        }
 
         contentBox.classList.remove('fade-out');
     }, 500);
 }
-
-
 
 // Rotation of about me section box by buttons
 let prev = document.querySelector('.nav-previous');
@@ -267,14 +269,14 @@ let rotationIndex = 0;
 
 prev.addEventListener('click', function(){
     degree += 90;
-    rotationIndex ++;
+    rotationIndex = ++rotationIndex % 6 + 1;
     box.style = `transform: perspective(1000px) rotateY(${degree}deg) translateY(100px) !important`;
-    changeContent(contentData['spanish'][Math.abs(rotationIndex) % 6 + 1]);
+    changeContent(contentData['spanish'][rotationIndex]);
 });
 
 next.addEventListener('click', function(){
     degree -= 90;
-    rotationIndex --;
+    rotationIndex = --rotationIndex % 6 + 1;
     box.style = `transform: perspective(1000px) rotateY(${degree}deg) translateY(100px) !important`;
-    changeContent(contentData['spanish'][Math.abs(rotationIndex) % 6 + 1]);
+    changeContent(contentData['spanish'][rotationIndex]);
 });
