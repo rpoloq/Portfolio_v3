@@ -276,7 +276,7 @@ prev.addEventListener('click', function(){
 
 next.addEventListener('click', function(){
     degree -= 90;
-    rotationIndex = --rotationIndex % 6 + 1;
+    rotationIndex = abs(rotationIndex - 1) % 6 + 1
     box.style = `transform: perspective(1000px) rotateY(${degree}deg) translateY(100px) !important`;
     changeContent(contentData['spanish'][rotationIndex]);
 });

@@ -2334,6 +2334,10 @@ a {
     gap: 30px;
 }
 
+.hidden {
+	display: none !important;
+}
+
 /* Slider Info Container */
 .content.box.style2 {
 	align-self: center;
@@ -2492,6 +2496,10 @@ a {
 
 						#menu ul > li > a {
 							line-height: 3em;
+						}
+
+						#banner .typed-text {
+							font-size: 2em !important;
 						}
 
 					}

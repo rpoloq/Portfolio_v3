@@ -3334,15 +3334,16 @@ input, select, textarea {
     display: block;
 } */
 iframe.project-view {
-    min-width: 799px !important;
+    min-width: 799px;
     min-height: 450px !important;
     margin: auto;
     display: block;
 }
 
 @media screen and (max-width: 1000px) {
-    .project-view iframe {
-        width: 100%;
+	iframe.project-view {
+		min-width: 0;
+        width: 340px !important;
     }
 }
 
