@@ -46,7 +46,7 @@
 						<h1><a href="index.html">Rafael Polope</a></h1>
 						<nav id="nav">
 							<ul>
-								<li class="special">
+								<li class="special english">
 									<a href="#menu" class="menuToggle"><span>Menu</span></a>
 									<div id="menu">
 										<ul>
@@ -55,19 +55,34 @@
 											<li><a href="#two">About Me</a></li>
 											<li><a href="#work">My Work</a></li>
 											<li><a href="#contact">Contact</a></li>
+										</ul>										
+									</div>
+								</li>
+								<li class="special spanish">
+									<a href="#menu" class="menuToggle"><span>Menú</span></a>
+									<div id="menu">
+										<ul>
+											<li><a href="#banner">Inicio</a></li>
+											<li><a href="#one">Demo Reel</a></li>
+											<li><a href="#two">Sobre Mí</a></li>
+											<li><a href="#work">Mis Trabajos</a></li>
+											<li><a href="#contact">Contacto</a></li>
 										</ul>
 									</div>
 								</li>
+								<div>
+									
+								</div>
 							</ul>
 						</nav>
 					</header>
 				</div>
 				<div class="inner">
 					<div id="particle-ground" class="background full-screen"></div>
-					<h2>Hi! WELCOME TO MY PERSONAL PORTOFLIO</h2>
+					<h2 class="english">Hi! WELCOME TO MY PORTFOLIO</h2>
+					<h2 class="spanish">¡HOLA! BIENVENIDO A MI PORTFOLIO</h2>
 					<div class="typed-text">
 						<span id="typing"></span>
-
 					</div>
 					<div class="typed-cursor"></div>
 				</div>
@@ -80,11 +95,10 @@
 					<!-- <img alt="demo-reel" src="images/wallpaper.png"> -->
 					<video id="demo-reel" controls width="100%">
 						<source src="./videos/DEMO-REEL_INTRO.mp4" type="video/mp4">
-						Tu navegador no admite la reproducción de videos.
 					</video>
 					<div class="notch"></div>
 				</div>
-				<div class="content box style2">
+				<div class="content box style2 english">
 					<header>
 						<h2>What I Do</h2>
 					</header>
@@ -92,24 +106,34 @@
 					<p>Here is a summary of my projects. I have compiled a mix of my works to showcase my skills in the simulation of fluids, particles, flocking agents, etc., in video games and immersive experiences. Additionally, I demonstrate my knowledge of computer graphics through my work on a render engine with ray tracing, shaders with GLSL, and Blender tools.</p>
 					<p>Hope you enjoy it! 😄</p>
 				</div>
+				<div class="content box style2 spanish">
+					<header>
+						<h2>Demo Reel</h2>
+					</header>
+					<p>¡Echa un vistazo a mi reel de demostración!</p>
+					<p>Aquí tienes un resumen de mis proyectos. He compilado una selección de mis trabajos para mostrar mis habilidades en la simulación de fluidos, partículas, agentes de agrupamiento, etc., en videojuegos y experiencias inmersivas. Además, demuestro mi conocimiento de gráficos por computadora a través de mi trabajo en un motor de renderizado con trazado de rayos, shaders con GLSL y herramientas de Blender.</p>
+					<p>¡Espero que lo disfrutes! 😄</p>
+				</div>
 			</section>
 
 		<!-- Two -->
 			<section id="two" class="main style2 left dark fullscreen">
-				<div class="content box style2">
+				<div class="content box style2 english">
 					<header>
 						<h2>Who I Am</h2>
 					</header>
 					<div class="container">
-						<p>
-							I'm Rafael Polope, a Multimedia Engineering graduate from the University of Valencia and a current student in U-TAD's Master's program for Computer Graphics, VR and Simulation in Madrid.
-						</p>
-						<p>
-							Passionate about computer graphics, I'm eager for a career shift after three years in web development. Proficient in Unity, Blender and Unreal, with programming skills in C++, C#, Java and Python, including libraries like OpenGL and OpenCV. My expertise spans simulation, shaders, video games, animation and XR.
-						</p>
-						<p>
-							I aspire to craft captivating worlds and immersive experiences, fostering constant learning and improvement. Striving to be a versatile standout professional in computer graphics.
-						</p>
+						<p>I'm Rafael Polope, graduated in Multimedia Engineering at the University of Valencia and currently pursuing my Master's Degree in Computer Graphics, Simulation and Virtual Reality at U-TAD in Madrid.</p>
+						<p>Passionate about computer graphics and technology, I have a strong background in both theoretical knowledge and practical skills, aiming to apply my expertise in creative and innovative projects.</p>
+					</div>
+				</div>
+				<div class="content box style2 spanish">
+					<header>
+						<h2>Quien Soy</h2>
+					</header>
+					<div class="container">
+						<p>Soy Rafael Polope, graduado en Ingeniería Multimedia en la Universidad de Valencia y actualmente cursando mi Master en Gráficos por Computadora, Simulación y Realidad Virtual en U-TAD en Madrid.</p>
+            			<p>Apasionado por los gráficos por computadora y la tecnología, tengo una sólida formación tanto en conocimientos teóricos como en habilidades prácticas, con el objetivo de aplicar mi experiencia en proyectos creativos e innovadores.</p>`
 					</div>
 				</div>
 				<div class="style4">
@@ -227,9 +251,9 @@
 						<div class="english">
 							<h2>Say Hello.</h2>
 						</div>
-						<!-- <div class="spanish">
+						<div class="spanish">
 							<h2>¿Hablamos?</h2>
-						</div> -->
+						</div>
 					</header>
 					<div class="box">
 						<form id="form" action="https://formspree.io/f/xjvnvbql">
@@ -276,6 +300,7 @@
 			<script src="assets/js/main.js"></script>
 			<script src="assets/js/vanilla-tilt.js"></script>
 			<script src="assets/js/about-me-data.js"></script>	
+			<script src="assets/js/language-manager.js"></script>	
 			<script>
 				
 				/* 3D effect for video container */
