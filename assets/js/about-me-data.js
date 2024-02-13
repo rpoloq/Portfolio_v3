@@ -2,12 +2,14 @@ const contentData = {
     spanish: {
         1: {
             header: "Quien soy",
+            image: "images/about-me/yo.jpg",
             content: `
             <p>Soy Rafael Polope, graduado en Ingeniería Multimedia en la Universidad de Valencia y actualmente cursando mi Master en Gráficos por Computadora, Simulación y Realidad Virtual en U-TAD en Madrid.</p>
             <p>Apasionado por los gráficos por computadora y la tecnología, tengo una sólida formación tanto en conocimientos teóricos como en habilidades prácticas, con el objetivo de aplicar mi experiencia en proyectos creativos e innovadores.</p>`
         },
         2: {
             header: "Habilidades",
+            image: "images/about-me/skills.jpg",
             content: `
                 <div id="skills">
                     <div class="section" id="programmingSkills">
@@ -72,6 +74,7 @@ const contentData = {
         },
         3: {
             header: "Educación",
+            image: "images/about-me/education.webp",
             content: `
                 <div class="mt-2">• Cursando: <span class="bold">Máster en Computación Gráfica, Simulación & RV</span> |<span class="secondary"> U-TAD</span></div>
                 <div class="mt-2">• Graduado en <span class="bold">Ingeniería Multimedia</span> (2017-2021, <strong class="secondary">Nota media: 8.1</strong>) | Universidad de Valencia</div>
@@ -80,6 +83,7 @@ const contentData = {
         },
         4: {
             header: "Experiencia",
+            image: "images/about-me/work-exp.avif",
             content: `
                 <div class="mt-2">•<span class="bold">Prácticas de Programador Web Junior (02/2021-05/2021)<span class="bold"> |<span class="secondary"> Diseño e Innovación, S.L </span></div>
                 <div class="pl-4">- Desarrollo de aplicaciones web, tanto Frontend como Backend, incluyendo una versión responsive para móviles.</div>
@@ -89,12 +93,14 @@ const contentData = {
         },
         5: {
             header: "Cursos",
+            image: "images/about-me/cursos.jpg",
             content: `
                 <div class="mt-2">•<span class="bold">SCRUM DEVELOPER PROFFESIONAL CERTIFICATE (SDPC)</span> |<span class="secondary"> CERTIPROF</span></div>
                 <div class="mt-2">•<span class="bold">INTELIGENCIA ARTIFICIAL APLICADA A LA EMPRESA</span> |<span class="secondary"> EDUCATIC GAP PUE S.L.</span></div>        `
         },
         6: {
             header: "Proyectos",
+            image: "images/about-me/projects.webp",
             content: `
                 <div class="mt-2">• <span class="bold">Proyectos personales:<span class="bold"></div>
                 <div class="pl-4">- Desarrollo de varios proyectos personales relacionados con modelado 3D, animación y desarrollo de juegos.</div>
@@ -109,6 +115,7 @@ const contentData = {
     {
         1: {
             header: "Who I Am",
+            image: "images/about-me/yo.jpg",
             content: `
                 <p>I'm Rafael Polope, graduated in Multimedia Engineering at the University of Valencia and currently pursuing my Master's Degree in Computer Graphics, Simulation and Virtual Reality at U-TAD in Madrid.</p>
                 <p>Passionate about computer graphics and technology, I have a strong background in both theoretical knowledge and practical skills, aiming to apply my expertise in creative and innovative projects.</p>
@@ -116,6 +123,7 @@ const contentData = {
         },
         2: {
             header: "Skills",
+            image: "images/about-me/skills.jpg",
             content: `
                 <div id="skills">
                     <div class="section" id="programmingSkills">
@@ -180,6 +188,7 @@ const contentData = {
         },
         3: {
             header: "Education",
+            image: "images/about-me/education.webp",
             content: `
                 <div class="mt-2">• Currently studying: <span class="bold">Master's in Computer Graphics, Simulation & VR</span> |<span class="secondary"> U-TAD</span></div>
                 <div class="mt-2">• Graduated in <span class="bold">Multimedia Engineering</span> (2017-2021, <strong class="secondary">Average grade: 8.1</strong>) | University of Valencia</div>
@@ -188,6 +197,7 @@ const contentData = {
         },
         4: {
             header: "Experience",
+            image: "images/about-me/work-exp.avif",
             content: `
                 <div class="mt-2">•<span class="bold">Junior Web Programmer Internship (02/2021-05/2021)<span class="bold"> |<span class="secondary"> Design and Innovation, S.L </span></div>
                 <div class="pl-4">- Development of web applications, both Frontend and Backend, including a responsive version for mobile.</div>
@@ -197,12 +207,14 @@ const contentData = {
         },
         5: {
             header: "Courses",
+            image: "images/about-me/cursos.jpg",
             content: `
                 <div class="mt-2">•<span class="bold">SCRUM DEVELOPER PROFESSIONAL CERTIFICATE (SDPC)</span> |<span class="secondary"> CERTIPROF</span></div>
                 <div class="mt-2">•<span class="bold">APPLIED ARTIFICIAL INTELLIGENCE TO THE COMPANY</span> |<span class="secondary"> EDUCATIC GAP PUE S.L.</span></div>        `
         },
         6: {
             header: "Projects",
+            image: "images/about-me/projects.webp",
             content: `
                 <div class="mt-2">• <span class="bold">Personal Projects:<span class="bold"></div>
                 <div class="pl-4">- Development of several personal projects related to 3D modeling, animation, and game development.</div>
@@ -260,23 +272,42 @@ function changeContent(data) {
     }, 500);
 }
 
+function updateCubeFaces() {
+    let cards = document.querySelectorAll('.slider .box .card');
+    for (let i = 0; i < cards.length; i++) {
+        let sectionIndex = (currentSectionIndex + i) % aboutMeSections.length;
+        cards[i].style.setProperty('--i', sectionIndex + 1); // Actualizar el índice de la cara
+        cards[i].querySelector('img').src = contentData["english"][sectionIndex].image;
+    }
+}
+
 // Rotation of about me section box by buttons
 let prev = document.querySelector('.nav-previous');
 let next = document.querySelector('.nav-next');
 let box = document.querySelector('.slider .box');
+let aboutMeSections = Object.keys(contentData.english);
 let degree = 0;
-let rotationIndex = 0;
+let currentCardIndex = 3;
+let currentSectionIndex = 0;
+
 
 prev.addEventListener('click', function(){
     degree += 90;
-    rotationIndex ++;
+    currentCardIndex = (currentCardIndex - 1 + 4) % 4;
+    currentSectionIndex = (currentSectionIndex - 1 + aboutMeSections.length) % aboutMeSections.length;
     box.style = `transform: perspective(1000px) rotateY(${degree}deg) translateY(100px) !important`;
-    changeContent(contentData['spanish'][Math.abs(rotationIndex) % 6 + 1]);
+    changeContent(contentData['spanish'][currentSectionIndex]);
+    updateCubeFaces();
 });
 
 next.addEventListener('click', function(){
     degree -= 90;
-    rotationIndex --;
+    currentCardIndex = (currentCardIndex + 1) % 4; 
+    currentSectionIndex = (currentSectionIndex + 1) % aboutMeSections.length;
     box.style = `transform: perspective(1000px) rotateY(${degree}deg) translateY(100px) !important`;
-    changeContent(contentData['spanish'][Math.abs(rotationIndex) % 6 + 1]);
+    changeContent(contentData['spanish'][currentSectionIndex]);
+    updateCubeFaces();
 });
+
+
+updateCubeFaces();
