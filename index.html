@@ -37,24 +37,20 @@
 					left: 40%;
 				}
 			}
-
-		.spanish {
-			display: none !important;
-		} 
 		</style>
 			
 		<!-- Banner -->
 			<section id="banner">
 				<div id="page-wrapper">
-					<header id="header" class="english">
+					<header id="header">
 						<h1><a href="index.html">Rafael Polope</a></h1>
 						<nav id="nav">
 							<div id="language-selector" class="dropdown" tab-index="0">
 								<button id="dropdown-btn"></button>
 								<ul class="dropdown-content" id="dropdown-content"></ul>
 							</div>
-							<ul>
-								<li class="special english">
+							<ul class="english">
+								<li class="special">
 									<a href="#menu" class="menuToggle"><span>Menu</span></a>
 									<div id="menu">
 										<ul>
@@ -66,7 +62,9 @@
 										</ul>								
 									</div>
 								</li>
-								<li class="special spanish">
+							</ul>
+							<ul class="spanish">
+								<li class="special">
 									<a href="#menu" class="menuToggle"><span>Menú</span></a>
 									<div id="menu">
 										<ul>
@@ -85,9 +83,6 @@
 										</div>	
 									</div>
 								</li>
-								<div>
-
-								</div>
 							</ul>
 						</nav>
 					</header>
@@ -95,7 +90,7 @@
 				<div class="inner">
 					<div id="particle-ground" class="background full-screen"></div>
 					<h2 class="english">Hi! WELCOME TO MY PORTFOLIO</h2>
-					<h2 class="spanish">¡HOLA! BIENVENIDO A MI PORTFOLIO</h2>
+					<h2 class="spanish">¡Hey! BIENVENIDO A MI PORTFOLIO</h2>
 					<div class="typed-text">
 						<span id="typing"></span>
 					</div>
@@ -176,11 +171,13 @@
 		<!-- Work -->
 			<section id="work" class="main style3 primary">
 				<div class="content">
-					<header>
+					<header class="english">
 						<h2>My Work</h2>
-						<p>Lorem ipsum dolor sit amet et sapien sed elementum egestas dolore condimentum.
-						Fusce blandit ultrices sapien, in accumsan orci rhoncus eu. Sed sodales venenatis
-						arcu, id varius justo euismod in. Curabitur egestas consectetur magna vitae.</p>
+						<p></p>
+					</header>
+					<header class="spanish">
+						<h2>Mis Trabajos</h2>
+						<p></p>
 					</header>
 
 					<!-- Gallery  -->
@@ -188,67 +185,97 @@
 						<article class="from-left">
 							<div class="image fit">
 								<img src="images/thumbs/simulation.png" title="Simulation" alt="" />
-								<div class="overlay">
-								<h3>SIMULATION</h3>
-								<p>Check out the simulations I've created for fluids, soft bodies, terrains, and more!</p>
-								<a href="projects/simulation.html" target="_blank" class="button">View Projects</a>
+								<div class="overlay english">
+									<h3>SIMULATION</h3>
+									<p>Check out the simulations I've created for fluids, soft bodies, terrains and more!</p>
+									<a href="projects/simulation.html" target="_blank" class="button">View Projects</a>
+								</div>
+								<div class="overlay spanish">
+									<h3>SIMULACIÓN</h3>
+									<p>Echa un vistazo a mis simulacion sobre fluidos, cuerpos blandos, terrenos y más!</p>
+									<a href="projects/simulation.html" target="_blank" class="button">View Projects</a>
 								</div>
 							</div>
 						</article>
 						<article class="from-right">
 							<div class="image fit">
 								<img src="images/thumbs/xr.jpg" title="Extended Reality" alt="" />
-								<div class="overlay">
-								<h3>EXTENDED REALITY</h3>
-								<p>Here, you'll find my projects related to the world of VR and AR!</p>
-								<a href="projects/extended-reality.html" class="button">View Projects</a>
+								<div class="overlay english">
+									<h3>EXTENDED REALITY</h3>
+									<p>Here, you'll find my projects related to the world of VR and AR!</p>
+									<a href="projects/extended-reality.html" class="button">View Projects</a>
+								</div>
+								<div class="overlay spanish">
+									<h3>REALIDAD EXTENDIDA</h3>
+									<p>¡Aquí encontrarás todos mis proyectos relacionados con el mundo de la RV y RA!</p>
+									<a href="projects/extended-reality.html" class="button">View Projects</a>
 								</div>
 							</div>
 						</article>
 							
-							<article class="from-left">
+						<article class="from-left">
 							<div class="image fit">
 								<img src="images/thumbs/videogames.png" title="Videogames" alt="" />
-								<div class="overlay">
-								<h3>VIDEOGAMES</h3>
-								<p>Take a look at my early steps in video game programming!</p>
-								<a href="projects/videogames.html" class="button">View Projects</a>
+								<div class="overlay english">
+									<h3>VIDEOGAMES</h3>
+									<p>Take a look at my early steps in video game programming!</p>
+									<a href="projects/videogames.html" class="button">View Projects</a>
+								</div>
+								<div class="overlay spanish">
+									<h3>VIDEOJUEGOS</h3>
+									<p>Echa un vistazo a mis primeros pasos en la programación de videojuegos!</p>
+									<a href="projects/videogames.html" class="button">View Projects</a>
 								</div>
 							</div>
-							</article>
-							
-							<article class="from-right">
+						</article>
+
+						<article class="from-right">
 							<div class="image fit">
 								<img src="images/thumbs/shaders.png" title="Shaders" alt="" />
-								<div class="overlay">
-								<h3>SHADERS</h3>
-								<p>See objects from another perspective with these shaders :)</p>
-								<a href="projects/shaders.html" class="button">View Projects</a>
+								<div class="overlay english">
+									<h3>SHADERS</h3>
+									<p>See objects from another perspective with these shaders :)</p>
+									<a href="projects/shaders.html" class="button">View Projects</a>
+								</div>
+								<div class="overlay spanish hidden">
+									<h3>SHADERS</h3>
+									<p>¡Mira los objetos desde otra perspectiva con estos shaders! :)</p>
+									<a href="projects/shaders.html" class="button">View Projects</a>
 								</div>
 							</div>
-							</article>
+						</article>
 							
-							<article class="from-left">
+						<article class="from-left">
 							<div class="image fit">
 								<img src="images/thumbs/computer-graphics.png" title="Computer Graphcis" alt="" />
-								<div class="overlay">
-								<h3>COMPUTER GRAPHICS</h3>
-								<p>I have even done some work with OpenGL, including... a rendering engine!</p>
-								<a href="projects/computer-graphics.html" class="button">View Projects</a>
+								<div class="overlay english">
+									<h3>COMPUTER GRAPHICS</h3>
+									<p>I have even done some work with OpenGL, including... a rendering engine!</p>
+									<a href="projects/computer-graphics.html" class="button">View Projects</a>
+								</div>
+								<div class="overlay spanish">
+									<h3>GRÁFICOS POR COMPUTADOR</h3>
+									<p>Incluso he hecho algo de trabajo con OpenGL, ¡incluyendo... un motor de renderizado!</p>
+									<a href="projects/computer-graphics.html" class="button">View Projects</a>
 								</div>
 							</div>
-							</article>
-							
-							<article class="from-right">
+						</article>
+					
+						<article class="from-right">
 							<div class="image fit">
-								<img src="images/thumbs/blender-tools.jpg" title="Bent IX" alt="" />
-								<div class="overlay">
-								<h3>BLENDER TOOLS</h3>
-								<p>Don't miss these Blender add-ons and the animations from their demos ;)</p>
-								<a href="projects/blender.html" class="button">View Projects</a>
+								<img src="images/thumbs/blender-tools.jpg" title="Blender Tools" alt="" />
+								<div class="overlay english">
+									<h3>BLENDER TOOLS</h3>
+									<p>Don't miss these Blender add-ons and the animations from their demos ;)</p>
+									<a href="projects/blender.html" class="button">View Projects</a>
+								</div>
+								<div class="overlay spanish">
+									<h3>HERRAMIENTAS DE BLENDER</h3>
+									<p>¡No te pierdas estos complementos de Blender y las animaciones de sus demos! ;)</p>
+									<a href="projects/blender.html" class="button">View Projects</a>
 								</div>
 							</div>
-							</article>
+						</article>
 					</div>
 				</div>
 			</section>
@@ -273,7 +300,8 @@
 							</div>
 							<input type="hidden" name="_next" value="./template_aux/generic.html" />
 							<ul class="actions special">
-								<li><input type="submit" value="Send Message" /></li>
+								<li class="english"><input type="submit" value="Send Message" /></li>
+								<li class="spanish"><input type="submit" value="Enviar Mensaje" /></li>
 							</ul>
 						</form>
 					</div>
@@ -281,7 +309,8 @@
 			</section>
 			<a id="scroll-link" href="#work" class="more scrolly">
 				<div class="scroll-content">
-					<p>See more</p>
+					<p class="english">See more!</p>
+					<p class="spanish">¡Hay más!</p>
 					<i class="fas fa-chevron-down"></i>
 				</div>
 			</a>
