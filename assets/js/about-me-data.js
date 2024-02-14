@@ -1,13 +1,13 @@
 const contentData = {
     spanish: {
-        1: {
+        0: {
             header: "Quien soy",
             image: "images/about-me/yo.jpg",
             content: `
             <p>Soy Rafael Polope, graduado en Ingeniería Multimedia en la Universidad de Valencia y actualmente cursando mi Master en Gráficos por Computadora, Simulación y Realidad Virtual en U-TAD en Madrid.</p>
             <p>Apasionado por los gráficos por computadora y la tecnología, tengo una sólida formación tanto en conocimientos teóricos como en habilidades prácticas, con el objetivo de aplicar mi experiencia en proyectos creativos e innovadores.</p>`
         },
-        2: {
+        1: {
             header: "Habilidades",
             image: "images/about-me/skills.jpg",
             content: `
@@ -72,7 +72,7 @@ const contentData = {
                 </div>    
             `
         },
-        3: {
+        2: {
             header: "Educación",
             image: "images/about-me/education.webp",
             content: `
@@ -81,7 +81,7 @@ const contentData = {
                 <div class="mt-2">• Bachillerato tecnológico | I.E.S. Escultor José Luis Sánchez (2015-2017, <strong class="secondary">Nota media: 9</strong>)</div>
             `
         },
-        4: {
+        3: {
             header: "Experiencia",
             image: "images/about-me/work-exp.avif",
             content: `
@@ -91,14 +91,14 @@ const contentData = {
                 <div class="pl-4">- Desarrollo y mantenimiento de aplicaciones web para el Sistema de Salud Murciano (SMS).</div>
             `
         },
-        5: {
+        4: {
             header: "Cursos",
             image: "images/about-me/cursos.jpg",
             content: `
                 <div class="mt-2">•<span class="bold">SCRUM DEVELOPER PROFFESIONAL CERTIFICATE (SDPC)</span> |<span class="secondary"> CERTIPROF</span></div>
                 <div class="mt-2">•<span class="bold">INTELIGENCIA ARTIFICIAL APLICADA A LA EMPRESA</span> |<span class="secondary"> EDUCATIC GAP PUE S.L.</span></div>        `
         },
-        6: {
+        5: {
             header: "Proyectos",
             image: "images/about-me/projects.webp",
             content: `
@@ -113,7 +113,7 @@ const contentData = {
     },
     english:
     {
-        1: {
+        0: {
             header: "Who I Am",
             image: "images/about-me/yo.jpg",
             content: `
@@ -121,7 +121,7 @@ const contentData = {
                 <p>Passionate about computer graphics and technology, I have a strong background in both theoretical knowledge and practical skills, aiming to apply my expertise in creative and innovative projects.</p>
             `
         },
-        2: {
+        1: {
             header: "Skills",
             image: "images/about-me/skills.jpg",
             content: `
@@ -186,7 +186,7 @@ const contentData = {
                 </div>    
             `
         },
-        3: {
+        2: {
             header: "Education",
             image: "images/about-me/education.webp",
             content: `
@@ -195,7 +195,7 @@ const contentData = {
                 <div class="mt-2">• Technological high school | I.E.S. Escultor José Luis Sánchez (2015-2017, <strong class="secondary">Average grade: 9</strong>)</div>
             `
         },
-        4: {
+        3: {
             header: "Experience",
             image: "images/about-me/work-exp.avif",
             content: `
@@ -205,14 +205,14 @@ const contentData = {
                 <div class="pl-4">- Development and maintenance of web applications for the Murcian Health System (SMS).</div>
             `
         },
-        5: {
+        4: {
             header: "Courses",
             image: "images/about-me/cursos.jpg",
             content: `
                 <div class="mt-2">•<span class="bold">SCRUM DEVELOPER PROFESSIONAL CERTIFICATE (SDPC)</span> |<span class="secondary"> CERTIPROF</span></div>
                 <div class="mt-2">•<span class="bold">APPLIED ARTIFICIAL INTELLIGENCE TO THE COMPANY</span> |<span class="secondary"> EDUCATIC GAP PUE S.L.</span></div>        `
         },
-        6: {
+        5: {
             header: "Projects",
             image: "images/about-me/projects.webp",
             content: `
@@ -272,23 +272,16 @@ function changeContent(data) {
     }, 500);
 }
 
-function updateCubeFaces() {
-    let cards = document.querySelectorAll('.slider .box .card');
-    for (let i = 0; i < cards.length; i++) {
-        let sectionIndex = (currentSectionIndex + i) % aboutMeSections.length;
-        cards[i].style.setProperty('--i', sectionIndex + 1); // Actualizar el índice de la cara
-        cards[i].querySelector('img').src = contentData["english"][sectionIndex].image;
-    }
-}
-
 // Rotation of about me section box by buttons
 let prev = document.querySelector('.nav-previous');
 let next = document.querySelector('.nav-next');
 let box = document.querySelector('.slider .box');
 let aboutMeSections = Object.keys(contentData.english);
 let degree = 0;
-let currentCardIndex = 3;
+let currentCardIndex = 2;
 let currentSectionIndex = 0;
+let sectionIndices = [4, 5, 0, 1, 2, 3]
+let facesIndices = [0, 1, 2, 3]
 
 
 prev.addEventListener('click', function(){
@@ -296,8 +289,21 @@ prev.addEventListener('click', function(){
     currentCardIndex = (currentCardIndex - 1 + 4) % 4;
     currentSectionIndex = (currentSectionIndex - 1 + aboutMeSections.length) % aboutMeSections.length;
     box.style = `transform: perspective(1000px) rotateY(${degree}deg) translateY(100px) !important`;
+
     changeContent(contentData['spanish'][currentSectionIndex]);
-    updateCubeFaces();
+
+    for (let i = 0; i < sectionIndices.length; i++) {
+        sectionIndices[i] = (sectionIndices[i] - 1 + sectionIndices.length) % sectionIndices.length;
+    }
+    
+    for (let i = 0; i < facesIndices.length; i++) {
+        facesIndices[i] = (facesIndices[i] - 1 + facesIndices.length) % facesIndices.length;
+    }
+    
+    let cards = document.querySelectorAll('.slider .box .card');
+    cards[facesIndices[0]].querySelector('img').src = contentData['spanish'][sectionIndices[0]].image;
+    cards[facesIndices[3]].querySelector('img').src = contentData['spanish'][sectionIndices[3]].image;
+
 });
 
 next.addEventListener('click', function(){
@@ -306,8 +312,17 @@ next.addEventListener('click', function(){
     currentSectionIndex = (currentSectionIndex + 1) % aboutMeSections.length;
     box.style = `transform: perspective(1000px) rotateY(${degree}deg) translateY(100px) !important`;
     changeContent(contentData['spanish'][currentSectionIndex]);
-    updateCubeFaces();
+
+    for (let i = 0; i < sectionIndices.length; i++) {
+        sectionIndices[i] = (sectionIndices[i] + 1) % sectionIndices.length;
+    }
+    
+    for (let i = 0; i < facesIndices.length; i++) {
+        facesIndices[i] = (facesIndices[i] + 1) % facesIndices.length;
+    }
+
+    let cards = document.querySelectorAll('.slider .box .card');
+    cards[facesIndices[0]].querySelector('img').src = contentData['spanish'][sectionIndices[0]].image;
+    cards[facesIndices[3]].querySelector('img').src = contentData['spanish'][sectionIndices[3]].image;
 });
 
-
-updateCubeFaces();

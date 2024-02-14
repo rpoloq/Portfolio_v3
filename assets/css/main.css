@@ -2078,10 +2078,8 @@ a {
 
 		#two .slider {
 			width: 100%;
-			/* margin:7%; */
 			display: flex;
 			justify-content: center;
-			/* border-radius: 100%; */
 			overflow: hidden;
 		}
 
@@ -2665,6 +2663,7 @@ a {
 @media screen and (max-width: 736px) {
 	#header nav > ul > li > a.menuToggle {
 		padding: 0 1.5em;
+		padding-left: 0;
 	}
 
 	#header nav > ul > li > a.menuToggle span {
@@ -2720,10 +2719,11 @@ a {
 	display: flex;
 	align-items: center;
 	font-size: 14px;
-	font-family: "Open Sans", sans-serif;
+	/* font-family: "Open Sans", sans-serif;
 	font-family: "Noto Sans JP", sans-serif;
 	font-family: "Noto Sans Arabic", sans-serif;
-	font-family: "Noto Sans KR", sans-serif;
+	font-family: "Noto Sans KR", sans-serif; */
+	font-family: "Source Sans Pro", "sans-serif";
 	font-weight: 500;
 }
 .arrow-down {
