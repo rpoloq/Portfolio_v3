@@ -11,12 +11,10 @@ async function loadJsonData(nombreArchivo) {
     }
 }
   
-async function getObjectFromJson(objectName) {
+async function getContentDataFromJson() {
     try {
         const data = await loadJsonData('./assets/data.json');
-        const object = data[objectName];
-        console.log(object);
-        return object;
+        contentData = data["contentData"];
     } catch (error) {
         console.error('There has been a problem loading the JSON:', error);
         throw error;
@@ -66,27 +64,52 @@ function changeContent(data, contentBox) {
 }
 
 
-// Rotation of about me section box by buttons
-let contentData;
-try {
-    contentData = await getObjectFromJson('contentData');
-    console.log(contentData);
-} catch (error) {
-    console.error(error);
-}
+let contentData = {
+    english: {
+        0: { header: "", image: "", content: "" },
+        1: { header: "", image: "", content: "" },
+        2: { header: "", image: "", content: "" },
+        3: { header: "", image: "", content: "" },
+        4: { header: "", image: "", content: "" },
+        5: { header: "", image: "", content: "" }
+    },
+    spanish: {
+        0: { header: "", image: "", content: "" },
+        1: { header: "", image: "", content: "" },
+        2: { header: "", image: "", content: "" },
+        3: { header: "", image: "", content: "" },
+        4: { header: "", image: "", content: "" },
+        5: { header: "", image: "", content: "" }
+    }
+};
+
+const seccionesIds = {
+    lenguajesProgramacion: "programmingSkills",
+    software: "software",
+    idiomas: "languages",
+    matematicas: "math",
+    otrasHabilidades: "otherSkills"
+};
+
+const idsEnglish = seccionesIds["lenguajesProgramacion"]; // Esto devolverá "programmingSkills"
+
+const idsSpanish = Object.keys(seccionesIds).find(key => seccionesIds[key] === "programmingSkills"); // Esto devolverá "lenguajesProgramacion"
+
+
+getContentDataFromJson();
+let aboutMeSections = Object.keys(contentData.english);
 const contentBoxes = document.querySelectorAll('#two .content.box.style2');
 let prev = document.querySelector('.nav-previous');
 let next = document.querySelector('.nav-next');
 let box = document.querySelector('.slider .box');
 
-let aboutMeSections = Object.keys(contentData.english);
 let degree = 0;
 let currentCardIndex = 2;
 let currentSectionIndex = 0;
 let sectionIndices = [4, 5, 0, 1, 2, 3]
 let facesIndices = [0, 1, 2, 3]
 
-
+// Rotation of about me section box by buttons
 prev.addEventListener('click', function(){
     degree += 90;
     currentCardIndex = (currentCardIndex - 1 + 4) % 4;
@@ -118,12 +141,9 @@ next.addEventListener('click', function(){
     currentSectionIndex = (currentSectionIndex + 1) % aboutMeSections.length;
     box.style = `transform: perspective(1000px) rotateY(${degree}deg) translateY(100px) !important`;
 
-    if (currentLanguage.name === "english")
-    {
-        changeContent(contentData['english'][currentSectionIndex], contentBoxes[0]);
-    }else{
-        changeContent(contentData['spanish'][currentSectionIndex], contentBoxes[1]);
-    }
+    changeContent(contentData['english'][currentSectionIndex], contentBoxes[0]);
+    changeContent(contentData['spanish'][currentSectionIndex], contentBoxes[1]);
+    
 
     for (let i = 0; i < sectionIndices.length; i++) {
         sectionIndices[i] = (sectionIndices[i] + 1) % sectionIndices.length;

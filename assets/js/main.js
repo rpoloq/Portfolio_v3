@@ -21,35 +21,40 @@
 	}
 
 	/* Contact form submit */
-	document.getElementById('form').addEventListener('submit', function(event) {
-        event.preventDefault();
-
-        const formData = new FormData(event.target);
-
-        // Agregar el destino de redirección después de enviar el formulario correctamente
-        formData.append('_next', 'form-submitted.html');
-
-        fetch('https://formspree.io/f/xjvnvbql', {
-            method: 'POST',
-            body: formData,
-            headers: {
-                'Accept': 'application/json'
-            }
-        })
-        .then(function(response) {
-            if (response.ok) {
-                // Redirigir después de enviar el formulario correctamente
-                window.location.href = 'form-submitted.html';
-            } else {
-                console.error('Error al enviar el formulario:', response.statusText);
-                // Manejar el error aquí si es necesario
-            }
-        })
-        .catch(function(error) {
-            console.error('Error al enviar el formulario:', error);
-            // Manejar el error aquí si es necesario
-        });
-    });
+	const form = document.getElementById('form')
+	
+	if (form)
+	{
+		form.addEventListener('submit', function(event) {
+			event.preventDefault();
+	
+			const formData = new FormData(event.target);
+	
+			// Agregar el destino de redirección después de enviar el formulario correctamente
+			formData.append('_next', 'form-submitted.html');
+	
+			fetch('https://formspree.io/f/xjvnvbql', {
+				method: 'POST',
+				body: formData,
+				headers: {
+					'Accept': 'application/json'
+				}
+			})
+			.then(function(response) {
+				if (response.ok) {
+					// Redirigir después de enviar el formulario correctamente
+					window.location.href = 'form-submitted.html';
+				} else {
+					console.error('Error al enviar el formulario:', response.statusText);
+					// Manejar el error aquí si es necesario
+				}
+			})
+			.catch(function(error) {
+				console.error('Error al enviar el formulario:', error);
+				// Manejar el error aquí si es necesario
+			});
+		});
+	}
 
 	// Breakpoints.
 		breakpoints({
