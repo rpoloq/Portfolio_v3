@@ -16,7 +16,6 @@ const LanguageEnum = {
 
 const dropdownBtn = document.getElementById("dropdown-btn");
 const dropdownContent = document.getElementById("dropdown-content");
-let currentLanguage = LanguageEnum.SPANISH;
 
 function getFlagSrc(countryCode) {
   return /^[A-Z]{2}$/.test(countryCode)
@@ -56,21 +55,28 @@ function setSelectedLocale(locale) {
   )}" /><span class="lang-name">${langName}</span><span class="arrow-down"></span>`;
 }
 
-setSelectedLocale(locales[0]);
-changeLanguage(locales[0])
+let currentLanguage = LanguageEnum.SPANISH;
+setSelectedLocale(locales[1]);
+changeLanguage(locales[1])
+
 const browserLang = new Intl.Locale(navigator.language).language;
-for (const locale of locales) {
-  const localeLang = new Intl.Locale(locale).language;
-  if (localeLang === browserLang && localeLang !== currentLanguage.locale) {
-    setSelectedLocale(locale);
-    changeLanguage(locale)
+
+if (browserLang !== currentLanguage.locale)
+{
+  for (const locale of locales) {
+    const localeLang = new Intl.Locale(locale).language;
+    if (localeLang === browserLang) {
+      setSelectedLocale(locale);
+      changeLanguage(locale)
+    }
   }
 }
+
 
 // Función para cambiar el idioma
 function changeLanguage(locale) {
   
-  if (locale === changeLanguage.locale) return;
+  if (locale === currentLanguage.locale) return;
   
   const elementsToHide = document.querySelectorAll(`.${currentLanguage.name}`);
   elementsToHide.forEach(element => {
