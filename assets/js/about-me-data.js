@@ -28,16 +28,31 @@ function showSection(sectionId) {
     sections.forEach(section => {
       section.style.display = 'none';
     });
-  
-    const sectionToShow = document.getElementById(sectionId);
-    sectionToShow.style.display = 'block';
+    
+    let sectionIdEn, sectionIdEs;
+    if (Object.keys(sectionsIds).includes(sectionId)) //El idioma actual es español
+    {
+        sectionIdEn = sectionsIds[sectionId];
+        sectionIdEs = sectionId;
+
+    }else{
+        sectionIdEs = Object.keys(sectionsIds).find(key => sectionsIds[key] === sectionId);
+        sectionIdEn = sectionId;
+    }
+    const sectionToShowEs = document.getElementById(sectionIdEs);
+    const sectionToShowEn = document.getElementById(sectionIdEn);
+    sectionToShowEs.style.display = 'block';
+    sectionToShowEn.style.display = 'block';
   
     const dots = document.querySelectorAll('.dot');
     dots.forEach(dot => {
       dot.classList.remove('active');
     });
-    const activeDot = document.querySelector(`.dot[data-section="${sectionId}"]`);
-    activeDot.classList.add('active');
+
+    const activeDotEs = document.querySelector(`.dot[data-section="${sectionIdEs}"]`);
+    const activeDotEn = document.querySelector(`.dot[data-section="${sectionIdEn}"]`);
+    activeDotEs.classList.add('active');
+    activeDotEn.classList.add('active');
 }
   
 
@@ -83,18 +98,13 @@ let contentData = {
     }
 };
 
-const seccionesIds = {
+const sectionsIds = {
     lenguajesProgramacion: "programmingSkills",
-    software: "software",
-    idiomas: "languages",
-    matematicas: "math",
-    otrasHabilidades: "otherSkills"
+    Software: "software",
+    Idiomas: "languages",
+    Matematicas: "math",
+    OtrasHabilidades: "otherSkills"
 };
-
-const idsEnglish = seccionesIds["lenguajesProgramacion"]; // Esto devolverá "programmingSkills"
-
-const idsSpanish = Object.keys(seccionesIds).find(key => seccionesIds[key] === "programmingSkills"); // Esto devolverá "lenguajesProgramacion"
-
 
 getContentDataFromJson();
 let aboutMeSections = Object.keys(contentData.english);

@@ -56,8 +56,8 @@ function setSelectedLocale(locale) {
 }
 
 let currentLanguage = LanguageEnum.SPANISH;
-setSelectedLocale(locales[1]);
-changeLanguage(locales[1])
+setSelectedLocale(locales[0]);
+changeLanguage(locales[0])
 
 const browserLang = new Intl.Locale(navigator.language).language;
 
