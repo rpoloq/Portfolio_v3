@@ -21,32 +21,40 @@
 					<header id="header">
 						<h1><a href="../index.html">Rafael Polope</a></h1>
 						<nav id="nav">
-							<ul>
-								<li class="special">
-									<a href="#menu" class="menuToggle"><span>Menu</span></a>
-									<div id="menu">
-										<ul>
-											<li><a href="#fluids">Fluids</a></li>
-											<li><a href="#terrains">Terrains</a></li>
-											<li><a href="#mass-spring">Mass-Spring</a></li>
-											<li><a href="#soft-bodies">Soft Body</a></li>
-											<li><a href="#rigid-bodies">Rigid Body</a></li>
-											<li><a href="#flocking">Flocking</a></li>
-											<li><a href="#particles">Particles</a></li>
-											<li><a href="#waves">Waves</a></li>
-											<li><a href="#numeric-integration">Numeric Integration</a></li>
-										</ul>
-									</div>
-								</li>
-							</ul>
+						  <div id="language-selector" class="dropdown" tab-index="0">
+							<button id="dropdown-btn"></button>
+							<ul class="dropdown-content" id="dropdown-content"></ul>
+						  </div>
+						  <ul>
+							<li class="special">
+							  <a href="#menu" class="menuToggle english"><span>Menu</span></a>
+							  <a href="#menu" class="menuToggle spanish"><span>Menú</span></a>
+							  <div id="menu">
+								<ul>
+									<li><a href="#fluids">Fluids</a></li>
+									<li><a href="#terrains">Terrains</a></li>
+									<li><a href="#mass-spring">Mass-Spring</a></li>
+									<li><a href="#soft-bodies">Soft Body</a></li>
+									<li><a href="#rigid-bodies">Rigid Body</a></li>
+									<li><a href="#flocking">Flocking</a></li>
+									<li><a href="#particles">Particles</a></li>
+									<li><a href="#waves">Waves</a></li>
+									<li><a href="#numeric-integration">Numeric Integration</a></li>
+								</ul>
+							  </div>
+							</li>
+						  </ul>
 						</nav>
-					</header>
-
+					  </header>
 				<!-- Main -->
 					<article id="main">
-						<header>
+						<header class="english">
 							<h2>Simulation</h2>
 							<p>"ALL ABOUT MY EXPERIENCE SIMULATING PHYSICAL BEHAVIORS AND NATURAL PHENOMENA"</p>
+						</header>
+						<header class="spanish">
+							<h2>Simulación</h2>
+							<p>"TODO SOBRE MI EXPRIENCIA SIMULANDO COMPORTAMIENTOS FÍSICOS Y NATURALES"</p>
 						</header>
 						<section id="fluids" class="wrapper style5">
 							<div class="inner">
@@ -328,7 +336,6 @@
 							<li>&copy; Untitled</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
 						</ul>
 					</footer>
-
 			</div>
 
 		<!-- Scripts -->
@@ -339,5 +346,6 @@
 			<script src="../assets/js/breakpoints.min.js"></script>
 			<script src="../assets/js/util.js"></script>
 			<script src="../assets/js/main.js"></script>
+			<script src="../assets/js/language-selector.js"></script>
 	</body>
 </html>

@@ -76,18 +76,15 @@ function setSelectedLocale(locale) {
 function setDefaultLanguage() {
   let defaultLocale;
 
-  // Verificar si hay un idioma especificado en la URL
   const urlParams = new URLSearchParams(window.location.search);
   const langParam = urlParams.get("lang");
   if (langParam && locales.includes(langParam)) {
     defaultLocale = langParam;
   } else {
-    // Verificar el idioma del navegador
     const browserLang = new Intl.Locale(navigator.language).language;
     if (allowedBrowserLocales.includes(browserLang)) {
       defaultLocale = browserLang;
     } else {
-      // Si no se encuentra ningún idioma válido, utilizar el primer idioma en la lista
       defaultLocale = locales[0];
     }
   }
@@ -95,6 +92,7 @@ function setDefaultLanguage() {
   currentLanguage = Object.values(LanguageEnum).find(lang => (lang.locale === defaultLocale || lang.browserLocale === defaultLocale));
   setSelectedLocale(defaultLocale);
   hideNonDefaultLanguageElements();
+  updateProjectLinksLangs();
 }
 
 function hideNonDefaultLanguageElements() {
@@ -110,7 +108,6 @@ function hideNonDefaultLanguageElements() {
   });
 }
 
-// Función para cambiar el idioma
 function changeLanguage(locale) {
   
   if (locale === currentLanguage.locale) return;
@@ -120,10 +117,8 @@ function changeLanguage(locale) {
       element.classList.add('hidden');
   });
 
-  // Actualizar el idioma actual
   currentLanguage = (locale === LanguageEnum.ENGLISH.locale) ? LanguageEnum.ENGLISH : LanguageEnum.SPANISH;
 
-  // Mostrar todos los elementos que corresponden al nuevo idioma
   const elementsToShow = document.querySelectorAll(`.${currentLanguage.name}`);
   elementsToShow.forEach(element => {
       element.classList.remove('hidden');
