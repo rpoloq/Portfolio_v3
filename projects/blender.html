@@ -1,9 +1,4 @@
 <!DOCTYPE HTML>
-<!--
-	Spectral by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
 	<head>
 		<title>Projects | Blender</title>
@@ -21,25 +16,34 @@
 					<header id="header">
 						<h1><a href="../index.html">Rafael Polope</a></h1>
 						<nav id="nav">
-							<ul>
-								<li class="special">
-									<a href="#menu" class="menuToggle"><span>Menu</span></a>
-									<div id="menu">
-										<ul>
-											<li><a href="#add-ons">Add-Ons</a></li>
-											<li><a href="#animations">Animations</a></li>
-										</ul>
-									</div>
-								</li>
-							</ul>
+						  <div id="language-selector" class="dropdown" tab-index="0">
+							<button id="dropdown-btn"></button>
+							<ul class="dropdown-content" id="dropdown-content"></ul>
+						  </div>
+						  <ul>
+							<li class="special">
+							  <a href="#menu" class="menuToggle english"><span>Menu</span></a>
+							  <a href="#menu" class="menuToggle spanish"><span>Menú</span></a>
+							  <div id="menu">
+								<ul>
+									<li><a href="#add-ons">Add-Ons</a></li>
+									<li><a href="#animations">Animations</a></li>
+								</ul>
+							  </div>
+							</li>
+						  </ul>
 						</nav>
-					</header>
+					  </header>
 
 				<!-- Main -->
 					<article id="main">
-						<header>
+						<header class="english">
 							<h2>Blender</h2>
 							<p>"TAKE A LOOK TO MY VARIOUS PROJECTS MADE IN BLENDER & PYTHON TOOLS"</p>
+						</header>
+						<header class="spanish">
+							<h2>Blender</h2>
+							<p>"HECHA UN PROYECTO A MIS PROYECTOS HECHOS EN BLENDER & HERRAMIENTAS CON PYTHON"</p>
 						</header>
 						<section id="add-ons" class="wrapper style5">
 							<div class="inner">
@@ -47,16 +51,17 @@
 								<h2 class="project-section-title">Add-ons</h2>
 								<hr />
 
-								<h3 class="project-title">Interpolation Add-On</h3>
+								<h3 class="project-title english">Interpolation Add-On</h3>
+								<h3 class="project-title spanish">Add-On de Interpolación</h3>
 								<div class="project-content">
 									<iframe class="project-view" src="https://www.youtube.com/embed/3ZXkBvm5w0M" frameborder="0" allowfullscreen></iframe>
 									<div class="spanish project-description">
-										<p></p>
+										<p>Este proyecto fue desarrollado durante la asignatura de Animación en el tercer año de mis estudios de grado. En él se desarrolló un complemento para Blender que permite asignar una trayectoria interpolada al objeto seleccionado en la escena, utilizando como base otra trayectoria dada con diferentes opciones de interpolación (lineal, Hermite o Catmull-Rom), y además añadir ruido aleatorio a la trayectoria interpolada. También se aplica una corrección de orientación al objeto para que su rotación sea correcta al seguir la trayectoria utilizando cuaterniones. Además, se puede ajustar un ángulo de alabeo para dar una sensación de movimiento más natural y orgánica. Por último, se ofrece la opción de corregir la velocidad del recorrido, permitiendo seleccionar entre una velocidad constante o una velocidad determinada por el usuario mediante la reparametrización matemática.</p>
 									</div>
 									<div class="english project-description">
-										<p>This project was developed during my Master's studies. This application is a simple game created to implement alternative VR movement mechanics to the usual joystick or teleportation methods. The game simulates an escape room where you must climb a tower by navigating through protruding rocks. The dynamics involve finding the correct rotation of the upper "cylinder" where the rocks of the higher level are located and climbing up before the rising lava catches up with you, ending the game.</p>
-										<p>A record of the best time achieved in completing the challenge is kept.</p>
+										<p>This project was developed during the Animation subject in the third year of my degree studies. It involved creating an add-on for Blender that allows assigning an interpolated path to the selected object in the scene, based on another given path with different interpolation options (linear, Hermite, or Catmull-Rom), and also adding random noise to the interpolated path. It also applies an orientation correction to the object so that its rotation is correct when following the path using quaternions. Additionally, a roll angle can be adjusted to provide a more natural and organic movement sensation. Finally, there is an option to adjust the speed of the path, allowing selection between a constant speed or a speed determined by the user through mathematical reparametrization.</p>
 									</div>
+									
 								</div>
 								
 								<h3 class="project-title">VFX Tool Add-On</h3>
@@ -75,7 +80,8 @@
 						<section id="animations" class="wrapper style5">
 							<div class="inner">
 
-								<h2 class="project-section-title">Animations</h2>
+								<h2 class="project-section-title english">Animations</h2>
+								<h2 class="project-section-title spanish">Animaciones</h2>
 								<hr />
 
 								<h3 class="project-title english">Interpolation Add-On Demo</h3>
@@ -126,7 +132,7 @@
 							<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
 						</ul>
 						<ul class="copyright">
-							<li>&copy; Untitled</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							<li>&copy; Rafael Polope</li><li>3D Developer</li>
 						</ul>
 					</footer>
 
@@ -140,5 +146,6 @@
 			<script src="../assets/js/breakpoints.min.js"></script>
 			<script src="../assets/js/util.js"></script>
 			<script src="../assets/js/main.js"></script>
+			<script src="../assets/js/language-selector.js"></script>
 	</body>
 </html>
