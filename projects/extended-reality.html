@@ -21,30 +21,40 @@
 					<header id="header">
 						<h1><a href="../index.html">Rafael Polope</a></h1>
 						<nav id="nav">
-							<ul>
-								<li class="special">
-									<a href="#menu" class="menuToggle"><span>Menu</span></a>
-									<div id="menu">
-										<ul>
-											<li><a href="#VR">Virtual Reality</a></li>
-											<li><a href="#AR">Augmented Reality</a></li>
-										</ul>
-									</div>
-								</li>
-							</ul>
+						  <div id="language-selector" class="dropdown" tab-index="0">
+							<button id="dropdown-btn"></button>
+							<ul class="dropdown-content" id="dropdown-content"></ul>
+						  </div>
+						  <ul>
+							<li class="special">
+							  <a href="#menu" class="menuToggle english"><span>Menu</span></a>
+							  <a href="#menu" class="menuToggle spanish"><span>Menú</span></a>
+							  <div id="menu">
+								<ul>
+									<li><a href="#VR">Virtual Reality</a></li>
+									<li><a href="#AR">Augmented Reality</a></li>
+								</ul>
+							  </div>
+							</li>
+						  </ul>
 						</nav>
-					</header>
+					  </header>
 
 				<!-- Main -->
 					<article id="main">
-						<header>
+						<header class="english">
 							<h2>Extended Reality</h2>
 							<p>"SEE MY FIRST STEPS INTO INMERSIVE TECHNOLOGY"</p>
+						</header>
+						<header class="spanish">
+							<h2>Realidad Extendida</h2>
+							<p>"MIRA MIS PRIMEROS PASOS EN EL CAMPO DE LA TECNOLOGÍA IINMERSIVA"</p>
 						</header>
 						<section id="VR" class="wrapper style5">
 							<div class="inner">
 
-								<h2 class="project-section-title">Virtual Reality</h2>
+								<h2 class="project-section-title english">Virtual Reality</h2>
+								<h2 class="project-section-title spanish">Realidad Virtual</h2>
 								<hr />
 
 								<h3 class="project-title">Scape Room</h3>
@@ -76,10 +86,12 @@
 						<section id="AR" class="wrapper style5">
 							<div class="inner">
 
-								<h2 class="project-section-title">Augmented Reality</h2>
+								<h2 class="project-section-title english">Augmented Reality</h2>
+								<h2 class="project-section-title spanish">Realidad Aumentada</h2>
 								<hr />
 
-								<h3 class="project-title">Interactive Objects Application</h3>
+								<h3 class="project-title english">Interactive Objects Application</h3>
+								<h3 class="project-title spanish">Aplicación con Objetos Interactuables</h3>
 								<div class="project-content">
 									<img class="project-view" src="/projects/clips/AR-app.gif" alt="ar-app"/>
 									<div class="spanish project-description">
@@ -90,7 +102,8 @@
 									</div>
 								</div>
 
-								<h3 class="project-title">AR Touristic Application</h3>
+								<h3 class="project-title english">AR Touristic Application</h3>
+								<h3 class="project-title spanish">Apliacación Turística en AR</h3>
 								<div class="project-content">
 									<iframe class="project-view" src="https://www.youtube.com/embed/8Xm__Rq3xqQ" frameborder="0" allowfullscreen></iframe>
 									
@@ -128,5 +141,6 @@
 			<script src="../assets/js/breakpoints.min.js"></script>
 			<script src="../assets/js/util.js"></script>
 			<script src="../assets/js/main.js"></script>
+			<script src="../assets/js/language-selector.js"></script>
 	</body>
 </html>
