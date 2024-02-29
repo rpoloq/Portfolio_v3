@@ -1,0 +1,212 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>Projects | Shaders</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link type="text/css" rel="stylesheet" href="assets/css/main.css" />
+  <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+</head>
+<body class="is-preload">
+  <!-- Page Wrapper -->
+  <div id="page-wrapper">
+    <!-- Header -->
+    <header id="header">
+      <h1><a href="../index.html">Rafael Polope</a></h1>
+      <nav id="nav">
+        <div id="language-selector" class="dropdown" tab-index="0">
+          <button id="dropdown-btn"></button>
+          <ul class="dropdown-content" id="dropdown-content"></ul>
+        </div>
+        <ul>
+          <li class="special">
+            <a href="#menu" class="menuToggle english"><span>Menu</span></a>
+            <a href="#menu" class="menuToggle spanish"><span>Menú</span></a>
+            <div id="menu">
+              <ul>
+                <li><a href="#glsl">GLSL</a></li>
+                <li><a href="#shaderlab">ShaderLab</a></li>
+                <li><a href="#hlsl">HLSL</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <!-- Main -->
+    <article id="main">
+      <header>
+        <div class="english">
+          <h2>Shaders</h2>
+          <p>""Check out my progress in shader development.""</p>
+        </div>
+        <div class="spanish">
+          <h2>Shaders</h2>
+          <p>"Mira mi progreso en el desarrollo de shaders"</p>
+        </div>
+      </header>
+      
+      <section id="glsl" class="wrapper style5">
+        <div class="inner">
+          <h2 class="project-section-title">GLSL</h2>
+          <hr />
+          <h3 class="project-title english">Shaders de Vértice y Fragmento</h3>
+          <h3 class="project-title spanish">Vertex and Fragment Shaders</h3>
+          <div class="project-content">
+            <img class="project-view" src="/projects/clips/vertex-and-fragment-shader.gif" alt="vertex-fragment"/>
+            <div class="spanish project-description">
+              <p>En este proyecto se comenzó a trabajar y entender los shaders de vértice y fragmento. En él se modifican los vértices de la geometría de la tetera en base a un parámetro variante según el tiempo que hace que fluctúen entre la forma de tetera y esfera de radio 3. También se ha trabajo con el descarte de ciertos fragmentos y la modificación del color en base al parámetro variante. Estos efectos pueden solaparse para dar el resultado que se muestra</p>
+            </div>
+            <div class="english project-description">
+              <p>This project explores vertex and fragment shaders to transform the geometry of a teapot, causing it to fluctuate between its original shape and a sphere with a radius of 3 over time. It also experiments with fragment discarding and color adjustment. These effects can be combined to achieve the desired result.</p>            
+            </div>
+          </div>
+          <h3 class="project-title english">Texturas, Reflejos y Refracción</h3>
+          <h3 class="project-title spanish">Textures, Reflections and Refractions</h3>
+          <div class="project-content">
+            <img class="project-view" src="/projects/clips/textures-reflections-refractions.gif" alt="textures-reflections-refractions"/>
+            <div class="spanish project-description">
+              <p>En esta práctica se desarrolló uno de los shaders más interesantes que he realizado ya que se hizo la implementación de texturas multitextura utilizando más de una textura y combinando adecuadamente la información de transparencia. También se realizó la texturización de un mapa de entrono, simulando la reflexión, creando la ilusión de objetos metálicos, y se exploró la refracción de los objetos para darles una apariencia de cristal, considerando los índices de refracción del vidrio y del aire, implementando además la dispersión cromática y las ecuaciones de Fresnel.</p>
+            </div>
+            <div class="english project-description">
+              <p>In this practice, one of the most interesting shaders I've worked on was developed, as it implemented multitexture textures using more than one texture and properly combining transparency information. Additionally, environment mapping texturing was performed, simulating reflection and creating the illusion of metallic objects. Furthermore, the refraction of objects was explored to give them a glass-like appearance, considering the refractive indices of glass and air, and implementing chromatic dispersion and Fresnel equations.</p>            
+            </div>
+          </div>
+          <h3 class="project-title spanish">Iluminación local, Tipos luces y Sombreado</h3>
+          <h3 class="project-title english">Local lighting, light types and Shading</h3>
+          <div class="project-content">
+            <img class="project-view" src="/projects/clips/lights-lighting-shading.gif" alt="textures-reflections-refractions"/>
+            <div class="spanish project-description">
+              <p>Experimentación con sombreados e iluminación. En esta ocasión se desarrollaron diferentes tipos de sombreados usando el modelo de iluminación <strong>Phong</strong>: sombreado suave, sombreado plano, sombreado Phong y sombreado Cartoon. En cuanto a iluminación se implementó la iluminación por píxel y por vértice con luz puntual, así como la iluminación focal.</p>            
+            </div>
+            <div class="english project-description">
+              <p>Experimentation with shading and lighting. On this occasion, different types of shading were developed using the Phong lighting model: smooth shading, flat shading, Phong shading, and Cartoon shading. Regarding lighting, pixel and vertex lighting with point light were implemented, as well as focal lighting.</p>            
+            </div>
+          </div>
+          <h3 class="project-title spanish">Mapeado de normales, de paralaje y de brillos</h3>
+          <h3 class="project-title english">Normal Mapping, Parallax Mapping, and Gloss Mapping</h3>
+          <div class="project-content">
+            <img class="project-view" src="/projects/clips/normal-parallax-bright-mapping.gif" alt="normal-parallax-bright-mapping"/>
+            <div class="spanish project-description">
+              <p>En esta práctica se emplearon mapas de brillo, paralaje y normales para lograr efectos realistas con geometría reducida. Se ajustaron los shaders para calcular la iluminación en el espacio tangente y se utilizaron mapas de normales para modificar los vectores normales de los fragmentos de los objetos. Se implementó la capacidad de activar y desactivar una textura de color y combinarla con la información del mapa de normales en el shader de fragmento. Además, se modificó el brillo especular de los objetos utilizando un mapa de brillos en el shader de fragmento y se empleó el mapeado de paralaje, tanto de forma simple como iterativa, para mejorar la sensación de volumen de los objetos.</p>
+            </div>
+            
+            <div class="english project-description">
+              <p>This practice employed gloss, parallax, and normal maps to achieve realistic effects with reduced geometry. Shaders were adjusted to calculate lighting in tangent space, and normal maps were used to modify normal vectors of object fragments. The capability to toggle a color texture was implemented and combined with normal map information in the fragment shader. Additionally, specular brightness of objects was altered using a gloss map in the fragment shader, and parallax mapping, both simple and iterative, was utilized to enhance the sense of volume in objects.</p>
+            </div>
+          </div>
+          <h3 class="project-title spanish">Iluminación hemisferio, basada en imágenes y armónicos esféricos</h3>
+          <h3 class="project-title english">Hemisphere Lighting, Image-based Lighting, and Spherical Harmonics</h3>          
+          <div class="project-content">
+            <img class="project-view" src="/projects/clips/armonic-spherics-lighting.gif" alt="armonic-spherics-lighting"/>
+            <div class="spanish project-description">
+              <p>En esta práctica se introducen cambios en los shaders para lograr diferentes efectos de iluminación. Se alternan entre una luz ambiente plana y una luz ambiente basada en la iluminación de hemisferio al presionar la tecla 'H', y entre un modelo de iluminación local y uno basado en armónicos esféricos al presionar la tecla 'S', que solo considera la parte difusa de la iluminación. Además, se implementa la iluminación basada en imágenes para la parte difusa al cargar y utilizar un mapa de irradiación, activado con la tecla 'I'. Finalmente, se añade una parte especular a los modelos basados en armónicos esféricos e imágenes, controlada por la tecla 'E'.</p>            
+            </div>
+            <div class="english project-description">
+              <p>This practice employed gloss, parallax, and normal maps to achieve realistic effects with reduced geometry. Shaders were adjusted to calculate lighting in tangent space, and normal maps were used to modify normal vectors of object fragments. The capability to toggle a color texture was implemented and combined with normal map information in the fragment shader. Additionally, specular brightness of objects was altered using a gloss map in the fragment shader, and parallax mapping, both simple and iterative, was utilized to enhance the sense of volume in objects.</p>
+            </div>
+          </div>
+          <h3 class="project-title spanish">Mapa de sombras</h3>
+          <h3 class="project-title english">Shadow Mapping</h3>          
+          <div class="project-content">
+            <img class="project-view" src="/projects/clips/shadow-mapping.gif" alt="shadow-mapping"/>
+            <div class="spanish project-description">
+              <p>Mapas de sombras: se implementan sombras en una escena con iluminación por píxel y luz local mediante el uso de mapas de sombras. Se configura un FBO para generar un mapa de profundidad y se ajustan los shaders para añadir el sombreado basado en este mapa. Se trata de solucionar el problema de precisión en las zonas iluminadas al dibujar solo las caras traseras o delanteras de los objetos según corresponda. Además, se experimenta con diferentes tamaños de textura de profundidad para evaluar su impacto en los resultados visuales. Se introducen filtros PCF con múltiples muestras para mejorar la calidad de las sombras, permitiendo incluso la configuración del número de muestras mediante un algoritmo de barrido para un control más preciso sobre la apariencia final de las sombras.</p>            
+            </div>
+            <div class="english project-description">
+              <p>Shadows Maps: Shadows are implemented in a scene with pixel lighting and local light using shadow maps. An FBO is configured to generate a depth map, and shaders are adjusted to incorporate shading based on this map. The aim is to address precision issues in illuminated areas by drawing only the back or front faces of objects as needed. Additionally, experimentation is conducted with different sizes of depth textures to assess their impact on visual results. PCF filters with multiple samples are introduced to enhance shadow quality, even allowing for the configuration of sample numbers through a scanning algorithm for finer control over the final appearance of shadows.</p>
+            </div>
+          </div>
+          <h3 class="project-title spanish">Shader de Teselación</h3>
+          <h3 class="project-title english">Tessellation Shader</h3>          
+          <div class="project-content">
+            <img class="project-view" src="/projects/clips/tessellation-shader.gif" alt="tessellation-shader"/>
+            <div class="spanish project-description">
+              <p>Para llevar a cabo este shader se utilizó un cubo definido por QUADS para luego transformarlo en una esfera mediante shaders de teselación. Para ello, se configuró el programa para incluir shaders de teselación y se implementó una esfera con un nivel de teselación fijo, donde se definió el nivel, tanto en el interior como en el contorno del parche. Luego, se introdujo un nivel de teselación variable en función de la distancia al punto de vista, primero globalmente para toda la esfera y luego para cada parche individualmente. Para resolver el problema de las grietas entre parches con diferentes niveles de teselación se calculó independientemente el nivel para cada lado del parche.</p>            
+            </div>
+            <div class="english project-description">
+              <p>To carry out this shader, a cube defined by QUADS was used and then transformed into a sphere using tessellation shaders. To do this, the program was configured to include tessellation shaders, and a sphere with a fixed tessellation level was implemented, where the level was defined both inside and on the contour of the patch. Then, a variable tessellation level based on the distance to the viewpoint was introduced, first globally for the entire sphere and then for each patch individually. To address the issue of cracks between patches with different tessellation levels, the level was independently calculated for each side of the patch.</p>            
+            </div>
+          </div>
+          <h3 class="project-title spanish">Shader de Geometría</h3>
+          <h3 class="project-title english">Geometry Shader</h3>          
+          <div class="project-content">
+            <img class="project-view" src="/projects/clips/geometry-shader.gif" alt="geometry-shader"/>
+            <div class="spanish project-description">
+              <p>En esta práctica se trabajó con shaders de geometría para realizar diversas transformaciones. Se usó el shader de geometría para convertir los triángulos de la tetera en puntos, calculando el baricentro de cada triángulo y usando ese punto como primitiva. También, se implementó una simulación de explosión en la que los puntos de la tetera se desplazan gradualmente en la dirección de su normal al pulsar una tecla específica. Además, se aplicó una técnica llamada "impostores" para representar los puntos como esferas mediante la generación de tiras de triángulos orientadas perpendicularmente a la vista y la proyección de una textura de esfera sobre ellas.</p>            
+            </div>
+            <div class="english project-description">
+              <p>In this practice, geometry shaders were utilized to perform various transformations. The geometry shader was employed to convert the triangles of the teapot into points by calculating the barycenter of each triangle and using that point as primitive. Additionally, an explosion simulation was implemented where the teapot's points gradually move in the direction of their normal when a specific key is pressed. Furthermore, a technique called "impostors" was applied to represent the points as spheres by generating strips of triangles oriented perpendicular to the view and projecting a sphere texture onto them.</p>            
+            </div>
+          </div>
+          <h3 class="project-title spanish">Shader de Cómputo</h3>
+          <h3 class="project-title english">Compute Shader</h3>          
+          <div class="project-content">
+            <img class="project-view" src="/projects/clips/compute-shader.gif" alt="compute-shader"/>
+            <div class="spanish project-description">
+              <p>En esta práctica, se aborda la simulación de partículas mediante shaders de geometría y cómputo. En la primera parte, se transforman las partículas en esferas utilizando la técnica de "impostores". Luego, se introduce la animación de las partículas utilizando un shader de cómputo, donde se actualizan las posiciones y velocidades de las partículas teniendo en cuenta la interacción con las paredes del cubo y la gravedad. Además, se implementa la amortiguación de las partículas al chocar con las paredes mediante un factor de atenuación ajustable. Por último, se experimenta con la optimización de los parámetros del shader de cómputo, incluyendo el número de partículas y el tamaño del grupo de trabajo, para lograr un mejor frame rate.</p>            
+            </div>
+            <div class="english project-description">
+              <p>In this practice, particle simulation is addressed using geometry and compute shaders. In the first part, particles are transformed into spheres using the "impostors" technique. Then, particle animation is introduced using a compute shader, where particle positions and velocities are updated considering interaction with the cube walls and gravity. Additionally, particle damping upon collision with walls is implemented via an adjustable attenuation factor. Finally, experimentation with optimizing compute shader parameters, including the number of particles and work group size, is conducted to achieve improved frame rates.</p>            
+            </div>
+          </div>
+          <h3 class="project-title">Toon-Shading</h3>
+          <div class="project-content">
+            <iframe class="project-view" src="https://www.youtube.com/embed/C4mtLTQ7yVU" frameborder="0" allowfullscreen title="toon-shading"></iframe>
+            <div class="spanish project-description">
+              <p>Este proyecto del cuarto año de ingeniería multimedia implementa dos efectos no fotorealistas similares: pintura de acuarela y de tinta. Se abordan aspectos clave como la dispersión del pigmento, recreando la distribución no homogénea del color con capas y texturas de ruido Perlin, detección de bordes, mapeado de normales de papel para simular dibujar en lienzo real, y uso de Frame Buffer Objects (FBO) para aplicar efectos a toda la escena.</p>
+                Para realizar el shader de tinta se partió del efecto de acuarela y realizaron pequeñas variaciones dadas su gran semejanza para implementarlo. Estas son: uso de colores ink (escala de grises) y ajuste del grosor del controno en ciertas partes.</p>
+            </div>
+            <div class="english project-description">
+              <p>This fourth-year multimedia engineering project implements two similar non-photorealistic effects: watercolor and ink painting effects. Key aspects addressed include pigment dispersion recreating non-homogeneous color distribution with layers and Perlin noise textures, edge detection, paper normal mapping to simulate drawing on a real canvas, and the use of Frame Buffer Objects (FBO) to apply effects to the entire scene.</p>
+            </div>
+          </div>
+          
+        </div>
+      </section>
+      <section id="shaderlab" class="wrapper style5">
+        <div class="inner">
+          <h2 class="project-section-title">ShaderLab</h2>
+          <div class="project-content">
+            <h3 class="project-title english">Coming Soon...</h3>
+            <h3 class="project-title spanish">Próximamente...</h3>
+          </div>
+          <hr />
+        </div>
+        </div>
+      </section>
+
+      <section id="hlsl" class="wrapper style5">
+        <div class="inner">
+          <h2 class="project-section-title">HLSL</h2>
+          <div class="project-content">
+            <h3 class="project-title english">Coming Soon...</h3>
+            <h3 class="project-title spanish">Próximamente...</h3>
+          </div>
+          <hr />
+        </div>
+      </section>
+    </article>
+    <!-- Footer -->
+    <footer id="footer">
+      <ul class="icons">
+        <li><a href="#" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+        <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+        <li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+      </ul>
+      <ul class="copyright">
+        <li>&copy; Rafael Polope</li><li>3D Developer</li>
+      </ul>
+    </footer>
+  </div>
+  <!-- Scripts -->
+  <script src="../assets/js/jquery.min.js"></script>
+  <script src="../assets/js/jquery.scrollex.min.js"></script>
+  <script src="../assets/js/jquery.scrolly.min.js"></script>
+  <script src="../assets/js/browser.min.js"></script>
+  <script src="../assets/js/breakpoints.min.js"></script>
+  <script src="../assets/js/util.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/language-selector.js"></script>
+</body>
+</html>
