@@ -25,7 +25,7 @@
             <div id="menu">
               <ul>
                 <li><a href="#opengl">Graphical Applications</a></li>
-                <li><a href="#comp-geometry">Copmutational Geometry</a></li>
+                <!-- <li><a href="#comp-geometry">Computational Geometry</a></li> -->
                 <li><a href="#proj-geometry">Projective Geometry</a></li>
               </ul>
             </div>
@@ -87,10 +87,10 @@
             </div>
           </div>
       </section>
-      <section id="comp-geometry" class="wrapper style5">
+      <section id="proj-geometry" class="wrapper style5">
         <div class="inner">
-          <h2 class="project-section-title spanish">Geometría Computacional</h2>
-          <h2 class="project-section-title english">Computational Geometry</h2>
+          <h2 class="project-section-title spanish">Geometría Proyectiva</h2>
+          <h2 class="project-section-title english">Projective Geometry</h2>
           <hr />
           <h3 class="project-title spanish">Panorámicas con Homografía</h3>
           <h3 class="project-title english">Panoramas with homographies</h3>
@@ -100,57 +100,25 @@
               <img width="25%" src="./images/homography_DC.png" alt="DC"/>
               <img width="40%" src="./images/homography_ABCD.png" alt="ABCD"/>
             </div>
-            
             <div class="spanish project-description">
-              <p>Esta práctica realizada durante mis estudios de máster trataba sobre la creación de una imagen panorámica mediante la composición de varias imágenes a través de transformaciones homográficas. Para ello se realizaron dos composiciones previas para crear imágenes agrupadas por parejas. Para evitar la degradación de la calidad debido a múltiples transformaciones, optamos por unir las imágenes de manera secuencial, primero uniendo la imagen más a la izquierda con la siguiente, y luego las dos parejas resultantes. Esto se realizó mediante la implementación de funciones para calcular la matriz de homografía la transformación homográfica a las coordenadas de los puntos de las imágenes. El proceso consistió en obtener los puntos de cada imagen, calcular la matriz de homografía y transformar las coordenadas de una de las imágenes para unirlas de manera precisa. Este enfoque permitió mantener la deformación al mínimo, obteniendo resultados claros y precisos en la composición final de las cuatro imágenes.</p>  
+              <p>Esta práctica realizada durante mis estudios de máster trataba sobre la creación de una imagen panorámica mediante la composición de varias imágenes a través de transformaciones homográficas. Para ello se realizaron dos composiciones previas para crear imágenes agrupadas por parejas. Para evitar la degradación de la calidad debido a múltiples transformaciones, optamos por unir las imágenes de manera secuencial, primero uniendo la imagen más a la izquierda con la siguiente, y luego las dos parejas resultantes. Esto se realizó mediante la implementación de funciones para calcular la matriz de homografía la transformación homográfica a las coordenadas de los puntos de las imágenes. El proceso consistió en obtener los puntos de cada imagen, calcular la matriz de homografía y transformar las coordenadas de una de las imágenes para unirlas de manera precisa. Este enfoque permitió mantener la deformación al mínimo, obteniendo resultados claros y precisos en la composición final de las cuatro imágenes. El proyeto fue realizado con <strong>Python</strong> y usando la librerías <strong>Matplotlib</strong></p>  
             </div>
             <div class="english project-description">
-              <p>This practice, carried out during my master's studies, focused on creating a panoramic image by composing multiple images using homographic transformations. Two preliminary compositions were made to create images grouped in pairs. To avoid degradation in quality due to multiple transformations, we chose to join the images sequentially, first by combining the leftmost image with the next one, and then the resulting pairs. This was achieved by implementing functions to calculate the homography matrix and apply the homographic transformation to the coordinates of the image points. The process involved obtaining points from each image, calculating the homography matrix, and transforming the coordinates of one of the images to accurately join them. This approach helped minimize deformation, resulting in clear and precise outcomes in the final composition of the four images.</p>            </div>
-          </div>
-          <hr />
-          <h3 class="project-title">Brazo Robótico</h3>
-          <h3 class="project-title">Robotic Arm</h3>
-          <div class="project-content">
-            <img class="project-view" src="./clips/robotic-arm.gif" alt="robotic-arm"/>
-            <div class="spanish project-description">
-              <p></p>  
+              <p>This practice, carried out during my master's studies, focused on creating a panoramic image by composing multiple images using homographic transformations. Two preliminary compositions were made to create images grouped in pairs. To avoid degradation in quality due to multiple transformations, we chose to join the images sequentially, first by combining the leftmost image with the next one, and then the resulting pairs. This was achieved by implementing functions to calculate the homography matrix and apply the homographic transformation to the coordinates of the image points. The process involved obtaining points from each image, calculating the homography matrix, and transforming the coordinates of one of the images to accurately join them. This approach helped minimize deformation, resulting in clear and precise outcomes in the final composition of the four images. The project was developed using <strong>Python</strong> and the library <strong>Matplotlib</strong></p>            
             </div>
-            <div class="english project-description">
-              <p></p>
-            </div>
-          </div>
-          
-        </div>
-          <hr />
-        </div>
-      </section>
-      <section id="proj-geometry" class="wrapper style5">
-        <div class="inner">
-          <h2 class="project-section-title spanish">Geometría Proyectiva</h2>
-          <h2 class="project-section-title english">Projective Geometry</h2>
-          <hr />
-          <h3 class="project-title spanish">Brazo Robótico</h3>
-          <h3 class="project-title english">Robotic Arm</h3>
-          <div class="project-content">
-            <img class="project-view" src="./clips/robotic-arm.gif" alt="robotic-arm"/>
-            <div class="spanish project-description">
-            </div>
-            <div class="english project-description">
-              <p></p>
+
+            <h3 class="project-title spanish">Proyección de un cubo</h3>
+            <h3 class="project-title english">Cube Projection</h3>
+            <div class="project-content">
+              <img class="project-view" src="./clips/pose-estimation.gif" alt="pose-estimation"/>
+              <div class="spanish project-description">
+                <p>Esta práctica fue desarrollada durante mis estudios de máster la cual se desarrolló con <strong>Python</strong> y usando la ibrería <strong>OpenCV</strong>. La práctica consistía en calcular la matriz de proyección (P = K[R | t]) para cada fotograma de un conjunto de imágenes y utilizarla para proyectar un cubo tridimensional sobre cuatro casillas de un tablero de ajedrez presente en las imágenes. Esto se logra detectando el tablero de ajedrez en cada imagen y calculando la matriz de proyección correspondiente. Posteriormente, se proyecta un cubo sobre las casillas del tablero utilizando esta matriz. Finalmente, se genera un video a 30 fotogramas por segundo que muestra las imágenes resultantes de la proyección del cubo sobre las casillas del tablero de ajedrez.</p>              
+              </div>
+              <div class="english project-description">
+                <p>This practice was developed during my master's studies which was developed with <strong>Python</strong> and using the <strong>OpenCV</strong> library. The practice consisted of calculating the projection matrix (P = K[R | t]) for each frame of a set of images and using it to project a three-dimensional cube onto four squares of a chessboard present in the images. This is achieved by detecting the checkerboard in each image and calculating the corresponding projection matrix. Subsequently, a cube is projected onto the squares of the board using this matrix. Finally, a video is generated at 30 frames per second that shows the images resulting from the projection of the cube onto the squares of the chessboard.</p>              </div>
             </div>
           </div>
           <hr />
-          <h3 class="project-title">Brazo Robótico</h3>
-          <h3 class="project-title">Robotic Arm</h3>
-          <div class="project-content">
-            <img class="project-view" src="./clips/robotic-arm.gif" alt="robotic-arm"/>
-            <div class="spanish project-description">
-              <p></p>  
-            </div>
-            <div class="english project-description">
-              <p></p>
-            </div>
-          </div>
         </div>
           <hr />
         </div>
