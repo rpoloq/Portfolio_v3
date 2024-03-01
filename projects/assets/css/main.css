@@ -3314,7 +3314,7 @@ input, select, textarea {
 
 .project-section-title {
 	font-size: 2.5em;
-    line-height: 0;
+    line-height: 1;
 }
 .project-view {
 	height: 450px;
