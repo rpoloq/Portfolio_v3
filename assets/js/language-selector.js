@@ -90,7 +90,7 @@ function setDefaultLanguage() {
   }
 
   currentLanguage = Object.values(LanguageEnum).find(lang => (lang.locale === defaultLocale || lang.browserLocale === defaultLocale));
-  setSelectedLocale(defaultLocale);
+  setSelectedLocale(currentLanguage.locale);
   hideNonDefaultLanguageElements();
   updateProjectLinksLangs();
 }
